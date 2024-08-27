@@ -1,0 +1,166 @@
+2024-02-09T04:55:08.4317944-03:00 [WRN] (Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware) Failed to determine the https port for redirect.
+2024-02-09T05:09:33.6747176-03:00 [WRN] (Microsoft.EntityFrameworkCore.Model.Validation) The property '"ID_CONCESSAO"' on entity type '"CONCESSAO"' is of type 'byte', but is set up to use a SQL Server identity column; this requires that values starting at 255 and counting down will be used for temporary key values. A temporary key value is needed for every entity inserted in a single call to 'SaveChanges'. Care must be taken that these values do not collide with real key values.
+2024-02-09T05:11:40.1780707-03:00 [ERR] (Microsoft.EntityFrameworkCore.Database.Command) Failed executing DbCommand ("146"ms) [Parameters=["@__token_0='?' (Size = 500) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [d].[ID_DEBITO] AS [Id], [d].[PLACA] AS [Placa], [d].[CONCESSAO] AS [Concessao], [d].[EIXOS] AS [Eixos], [d].[DH_PASSAGEM] AS [Data], [d].[VALOR] AS [Valor], [d].[VENCIMENTO] AS [Vencimento]
+FROM [DEBITO] AS [d]
+WHERE [d].[TOKEN_USUARIO] = @__token_0 AND ([d].[PAGO_EM] IS NULL)"
+2024-02-09T05:11:40.2835585-03:00 [ERR] (Microsoft.EntityFrameworkCore.Query) An exception occurred while iterating over the results of a query for context type '"PedagioPayPortalUsuario.Models.PEDAGIOPAYContext"'."
+""Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'PAGO_EM'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:113be19c-a7cf-4499-99e3-a42279c71aef
+Error Number:207,State:1,Class:16"
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'PAGO_EM'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at PedagioPayPortalUsuario.Data.Repositories.DebitoRepository.Buscar(String token) in C:\Users\fadami.FDM-058\Desktop\PedagioPayPortalUsuarioBack\PedagioPayPortalUsuario\Data\Repositories\DebitoRepository.cs:line 47
+ClientConnectionId:113be19c-a7cf-4499-99e3-a42279c71aef
+Error Number:207,State:1,Class:16
+2024-02-09T07:42:27.3160440-03:00 [ERR] (Microsoft.EntityFrameworkCore.Database.Command) Failed executing DbCommand ("137"ms) [Parameters=["@__token_0='?' (Size = 500) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [d].[ID_DEBITO] AS [Id], [d].[PLACA] AS [Placa], [d].[CONCESSAO] AS [Concessao], [d].[EIXOS] AS [Eixos], [d].[DH_PASSAGEM] AS [Data], [d].[VALOR] AS [Valor], [d].[VENCIMENTO] AS [Vencimento]
+FROM [DEBITO] AS [d]
+WHERE [d].[TOKEN_USUARIO] = @__token_0 AND ([d].[PAGO_EM] IS NULL)"
+2024-02-09T07:42:27.3317039-03:00 [ERR] (Microsoft.EntityFrameworkCore.Query) An exception occurred while iterating over the results of a query for context type '"PedagioPayPortalUsuario.Models.PEDAGIOPAYContext"'."
+""Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'PAGO_EM'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:db0780d1-7a3b-4bdb-a355-954de534260d
+Error Number:207,State:1,Class:16"
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'PAGO_EM'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at PedagioPayPortalUsuario.Data.Repositories.DebitoRepository.Buscar(String token) in C:\Users\fadami.FDM-058\Desktop\PedagioPayPortalUsuarioBack\PedagioPayPortalUsuario\Data\Repositories\DebitoRepository.cs:line 47
+ClientConnectionId:db0780d1-7a3b-4bdb-a355-954de534260d
+Error Number:207,State:1,Class:16
+2024-02-09T07:50:12.4637736-03:00 [ERR] (Microsoft.EntityFrameworkCore.Database.Command) Failed executing DbCommand ("137"ms) [Parameters=["@__token_0='?' (Size = 500) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [d].[ID_DEBITO] AS [Id], [d].[PLACA] AS [Placa], [d].[CONCESSAO] AS [Concessao], [d].[EIXOS] AS [Eixos], [d].[DH_PASSAGEM] AS [Data], [d].[VALOR] AS [Valor], [d].[VENCIMENTO] AS [Vencimento]
+FROM [DEBITO] AS [d]
+WHERE [d].[TOKEN_USUARIO] = @__token_0 AND ([d].[PAGO_EM] IS NULL)"
+2024-02-09T07:50:12.4809902-03:00 [ERR] (Microsoft.EntityFrameworkCore.Query) An exception occurred while iterating over the results of a query for context type '"PedagioPayPortalUsuario.Models.PEDAGIOPAYContext"'."
+""Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'PAGO_EM'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:18e3cc3f-efec-4280-8ff1-345edfb56219
+Error Number:207,State:1,Class:16"
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'PAGO_EM'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at PedagioPayPortalUsuario.Data.Repositories.DebitoRepository.Buscar(String token) in C:\Users\fadami.FDM-058\Desktop\PedagioPayPortalUsuarioBack\PedagioPayPortalUsuario\Data\Repositories\DebitoRepository.cs:line 47
+ClientConnectionId:18e3cc3f-efec-4280-8ff1-345edfb56219
+Error Number:207,State:1,Class:16
+2024-02-09T07:53:57.3914003-03:00 [WRN] (Microsoft.EntityFrameworkCore.Model.Validation) The property '"ID_CONCESSAO"' on entity type '"CONCESSAO"' is of type 'byte', but is set up to use a SQL Server identity column; this requires that values starting at 255 and counting down will be used for temporary key values. A temporary key value is needed for every entity inserted in a single call to 'SaveChanges'. Care must be taken that these values do not collide with real key values.
+2024-02-09T07:54:03.9252713-03:00 [ERR] (Microsoft.EntityFrameworkCore.Database.Command) Failed executing DbCommand ("152"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [DEBITO] (
+    [ID_DEBITO] int NOT NULL IDENTITY,
+    [ID_PASSAGEM] bigint NOT NULL,
+    [CATEGORIA] varchar(20) NOT NULL,
+    [VALOR] smallmoney NOT NULL,
+    [DH_PASSAGEM] datetime2 NOT NULL,
+    [CONCESSAO] nvarchar(max) NOT NULL,
+    [PLACA] varchar(7) NOT NULL,
+    [TAG] varchar(10) NOT NULL,
+    [ID_OSA] tinyint NULL,
+    [CD_STATUS] bit NULL,
+    [DH_TIMESTAMP] datetime NULL,
+    CONSTRAINT [PK_DEBITO] PRIMARY KEY ([ID_DEBITO])
+);"
+2024-02-09T08:00:37.8590033-03:00 [WRN] (Microsoft.EntityFrameworkCore.Model.Validation) The property '"ID_CONCESSAO"' on entity type '"CONCESSAO"' is of type 'byte', but is set up to use a SQL Server identity column; this requires that values starting at 255 and counting down will be used for temporary key values. A temporary key value is needed for every entity inserted in a single call to 'SaveChanges'. Care must be taken that these values do not collide with real key values.
+2024-02-09T08:01:39.8748017-03:00 [WRN] (Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware) Failed to determine the https port for redirect.
+2024-02-09T08:01:44.6569438-03:00 [WRN] (Microsoft.EntityFrameworkCore.Model.Validation) The property '"ID_CONCESSAO"' on entity type '"CONCESSAO"' is of type 'byte', but is set up to use a SQL Server identity column; this requires that values starting at 255 and counting down will be used for temporary key values. A temporary key value is needed for every entity inserted in a single call to 'SaveChanges'. Care must be taken that these values do not collide with real key values.
+2024-02-09T08:15:13.5977554-03:00 [WRN] (Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware) Failed to determine the https port for redirect.
+2024-02-09T08:15:16.0811865-03:00 [WRN] (Microsoft.EntityFrameworkCore.Model.Validation) The property '"ID_CONCESSAO"' on entity type '"CONCESSAO"' is of type 'byte', but is set up to use a SQL Server identity column; this requires that values starting at 255 and counting down will be used for temporary key values. A temporary key value is needed for every entity inserted in a single call to 'SaveChanges'. Care must be taken that these values do not collide with real key values.
+2024-02-09T09:50:40.7301044-03:00 [WRN] (Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware) Failed to determine the https port for redirect.
+2024-02-09T09:52:13.4378984-03:00 [WRN] (Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware) Failed to determine the https port for redirect.
+2024-02-09T20:09:35.5433863-03:00 [WRN] (Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware) Failed to determine the https port for redirect.
+2024-02-09T20:09:45.4739171-03:00 [WRN] (Microsoft.EntityFrameworkCore.Model.Validation) The property '"ID_CONCESSAO"' on entity type '"CONCESSAO"' is of type 'byte', but is set up to use a SQL Server identity column; this requires that values starting at 255 and counting down will be used for temporary key values. A temporary key value is needed for every entity inserted in a single call to 'SaveChanges'. Care must be taken that these values do not collide with real key values.
+2024-02-09T20:10:56.8270666-03:00 [ERR] (Microsoft.EntityFrameworkCore.Database.Command) Failed executing DbCommand ("141"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (Size = 30) (DbType = AnsiString), @p2='?' (Size = 30) (DbType = AnsiString), @p3='?' (Size = 40) (DbType = AnsiString), @p4='?' (Size = 7) (DbType = AnsiStringFixedLength), @p5='?' (Size = 500) (DbType = AnsiString), @p6='?' (Size = 100) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [USUARIO_PLACA] ([ANO], [COR], [MARCA], [MODELO], [PLACA], [TOKEN_USUARIO], [USUARIO_EMAIL])
+OUTPUT INSERTED.[ID_USUARIO_PLACA], INSERTED.[CD_STATUS], INSERTED.[DH_TIMESTAMP]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);"
+2024-02-09T20:12:57.3811883-03:00 [WRN] (Microsoft.EntityFrameworkCore.Model.Validation) The property '"ID_CONCESSAO"' on entity type '"CONCESSAO"' is of type 'byte', but is set up to use a SQL Server identity column; this requires that values starting at 255 and counting down will be used for temporary key values. A temporary key value is needed for every entity inserted in a single call to 'SaveChanges'. Care must be taken that these values do not collide with real key values.
+2024-02-09T20:12:57.7150161-03:00 [WRN] (Microsoft.EntityFrameworkCore.Model.Validation) The property '"ID_CONCESSAO"' on entity type '"CONCESSAO"' is of type 'byte', but is set up to use a SQL Server identity column; this requires that values starting at 255 and counting down will be used for temporary key values. A temporary key value is needed for every entity inserted in a single call to 'SaveChanges'. Care must be taken that these values do not collide with real key values.
+2024-02-09T20:13:19.0752204-03:00 [WRN] (Microsoft.EntityFrameworkCore.Model.Validation) The property '"ID_CONCESSAO"' on entity type '"CONCESSAO"' is of type 'byte', but is set up to use a SQL Server identity column; this requires that values starting at 255 and counting down will be used for temporary key values. A temporary key value is needed for every entity inserted in a single call to 'SaveChanges'. Care must be taken that these values do not collide with real key values.
+2024-02-09T20:20:33.7811880-03:00 [WRN] (Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware) Failed to determine the https port for redirect.
+2024-02-09T20:20:36.0977715-03:00 [WRN] (Microsoft.EntityFrameworkCore.Model.Validation) The property '"ID_CONCESSAO"' on entity type '"CONCESSAO"' is of type 'byte', but is set up to use a SQL Server identity column; this requires that values starting at 255 and counting down will be used for temporary key values. A temporary key value is needed for every entity inserted in a single call to 'SaveChanges'. Care must be taken that these values do not collide with real key values.
+2024-02-09T20:30:52.7043194-03:00 [WRN] (Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware) Failed to determine the https port for redirect.
+2024-02-09T20:30:54.5181479-03:00 [WRN] (Microsoft.EntityFrameworkCore.Model.Validation) The property '"ID_CONCESSAO"' on entity type '"CONCESSAO"' is of type 'byte', but is set up to use a SQL Server identity column; this requires that values starting at 255 and counting down will be used for temporary key values. A temporary key value is needed for every entity inserted in a single call to 'SaveChanges'. Care must be taken that these values do not collide with real key values.

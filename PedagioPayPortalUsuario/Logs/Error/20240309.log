@@ -1,0 +1,4 @@
+2024-03-09T10:21:48.1728467-03:00 [WRN] (Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware) Failed to determine the https port for redirect.
+2024-03-09T10:22:58.2763459-03:00 [WRN] (Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware) Failed to determine the https port for redirect.
+2024-03-09T10:25:19.9842983-03:00 [WRN] (Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware) Failed to determine the https port for redirect.
+2024-03-09T10:25:46.7068133-03:00 [WRN] (Microsoft.EntityFrameworkCore.Model.Validation) The property '"ID_CONCESSAO"' on entity type '"CONCESSAO"' is of type 'byte', but is set up to use a SQL Server identity column; this requires that values starting at 255 and counting down will be used for temporary key values. A temporary key value is needed for every entity inserted in a single call to 'SaveChanges'. Care must be taken that these values do not collide with real key values.

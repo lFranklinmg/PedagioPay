@@ -1,0 +1,25 @@
+﻿#DOCUMENTÇÃO TÉCNICA DA API PEDAGIO PAY
+##Estrutura do Projeto
+##SPRINT 1: Autenticação e Cadastro
+###•	Enpoint Cadastro
+Responsável por realizar o cadastro tradicional de usuários e chamar o serviço responsável pelo envio de e-mail. 
+Após passar pela verificação do método VerificaEmail() presente no serviço UsuarioService, esse endpoint espera os seguintes dados:
+{ 
+  "NOME": "Bianca Kelly Santos Rodrigues",
+  "EMAIL": "bkellys0578@gmail.com",
+  "CPF_CNPJ": "13131313131",
+  "CELULAR": "131313131",
+  "SENHA": "123456bi",
+  "BL_VALIDADO": false,
+  "CODIGO_VALIDAO": "",
+  "CD_STATUS": 1,
+  "ID_FACEBOOK": "",
+  "ID_GOOGLE": "",
+  "ID_APPLE": ""
+}
+
+Caso não passe na verificação, a api retorna Statuscode 400 com mensagem correspondente ao erro.
+
+•	Enpoint ConfirmacaoCadatro
+Responsável por chamar o serviço ValidaCodigo
+

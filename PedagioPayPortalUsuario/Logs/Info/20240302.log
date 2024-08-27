@@ -1,0 +1,1424 @@
+2024-03-02T00:00:04.5925178-03:00 [INF] Request starting HTTP/1.1 POST http://localhost:3001/Usuario/Cadastro application/json-patch+json 156
+2024-03-02T00:00:04.6202441-03:00 [DBG] "POST" requests are not supported
+2024-03-02T00:00:04.6369112-03:00 [DBG] The request has an origin header: '"http://localhost:3001"'.
+2024-03-02T00:00:04.6408862-03:00 [INF] CORS policy execution successful.
+2024-03-02T00:00:04.6478932-03:00 [WRN] Failed to determine the https port for redirect.
+2024-03-02T00:00:04.7025692-03:00 [DBG] 1 candidate(s) found for the request path '"/Usuario/Cadastro"'
+2024-03-02T00:00:04.7233855-03:00 [DBG] Endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"' with route pattern '"Usuario/Cadastro"' is valid for the request path '"/Usuario/Cadastro"'
+2024-03-02T00:00:04.7291295-03:00 [DBG] Request matched endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"'
+2024-03-02T00:00:04.7480873-03:00 [INF] Executing endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"'
+2024-03-02T00:00:04.8123115-03:00 [INF] Route matched with "{action = \"CadastraUsuario\", controller = \"Usuario\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[PedagioPayPortalUsuario.Models.USUARIO]] CadastraUsuario(PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto)" on controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario").
+2024-03-02T00:00:04.8218580-03:00 [DBG] Execution plan of "authorization" filters (in the following order): ["None"]
+2024-03-02T00:00:04.8262631-03:00 [DBG] Execution plan of "resource" filters (in the following order): ["None"]
+2024-03-02T00:00:04.8314934-03:00 [DBG] Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-03-02T00:00:04.8372353-03:00 [DBG] Execution plan of "exception" filters (in the following order): ["None"]
+2024-03-02T00:00:04.8415362-03:00 [DBG] Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-03-02T00:00:04.8473013-03:00 [DBG] Executing controller factory for controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario")
+2024-03-02T00:00:05.2891612-03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-03-02T00:00:05.7147041-03:00 [DBG] Executed controller factory for controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario")
+2024-03-02T00:00:05.7242658-03:00 [DBG] Attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' ...
+2024-03-02T00:00:05.7376076-03:00 [DBG] Attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' using the name '""' in request data ...
+2024-03-02T00:00:05.7431024-03:00 [DBG] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter"' for content type '"application/json-patch+json"'.
+2024-03-02T00:00:05.7488879-03:00 [DBG] Selected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter"' for content type '"application/json-patch+json"'.
+2024-03-02T00:00:05.7686758-03:00 [DBG] Connection id ""0HN1QCJA0S6C6"", Request id ""0HN1QCJA0S6C6:00000004"": started reading request body.
+2024-03-02T00:00:05.7834621-03:00 [DBG] Connection id ""0HN1QCJA0S6C6"", Request id ""0HN1QCJA0S6C6:00000004"": done reading request body.
+2024-03-02T00:00:06.1515142-03:00 [DBG] Done attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T00:00:06.1553128-03:00 [DBG] Done attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T00:00:06.1589992-03:00 [DBG] Attempting to validate the bound parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' ...
+2024-03-02T00:00:06.1809087-03:00 [DBG] Done attempting to validate the bound parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T00:00:07.4888787-03:00 [WRN] The property '"ID_CONCESSAO"' on entity type '"CONCESSAO"' is of type 'byte', but is set up to use a SQL Server identity column; this requires that values starting at 255 and counting down will be used for temporary key values. A temporary key value is needed for every entity inserted in a single call to 'SaveChanges'. Care must be taken that these values do not collide with real key values.
+2024-03-02T00:00:07.8783408-03:00 [DBG] Entity Framework Core "7.0.0" initialized '"PEDAGIOPAYContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"7.0.0"' with options: "None"
+2024-03-02T00:00:08.0372011-03:00 [DBG] Compiling query expression: "
+"'"DbSet<USUARIO>()
+    .FirstOrDefault(x => x.EMAIL == __emailUsuario_0)"'
+2024-03-02T00:00:08.9724040-03:00 [DBG] Generated query execution expression: "
+"'"queryContext => new SingleQueryingEnumerable<USUARIO>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: USUARIO.EMAIL (string) Required PK AfterSave:Throw MaxLength(100) Ansi, 0], [Property: USUARIO.BL_VALIDADO (bool?) ValueGenerated.OnAdd, 1], [Property: USUARIO.CD_STATUS (bool?) ValueGenerated.OnAdd, 2], [Property: USUARIO.CELULAR (string) MaxLength(12) Ansi, 3], [Property: USUARIO.CODIGO_VALIDACAO (string) MaxLength(4) Ansi, 4], [Property: USUARIO.CPF_CNPJ (string) MaxLength(20) Ansi, 5], [Property: USUARIO.DH_TIMESTAMP (DateTime?) ValueGenerated.OnAdd, 6], [Property: USUARIO.ID_APPLE (string) MaxLength(50) Ansi, 7], [Property: USUARIO.ID_FACEBOOK (string) MaxLength(50) Ansi, 8], [Property: USUARIO.ID_GOOGLE (string) MaxLength(50) Ansi, 9], [Property: USUARIO.ID_USUARIO (int) Required ValueGenerated.OnAdd, 10], [Property: USUARIO.NOME (string) MaxLength(50) Ansi, 11], [Property: USUARIO.SENHA (string) MaxLength(100) Ansi, 12], [Property: USUARIO.TOKEN (string) MaxLength(500) Ansi, 13] }
+        SELECT TOP(1) u.EMAIL, u.BL_VALIDADO, u.CD_STATUS, u.CELULAR, u.CODIGO_VALIDACAO, u.CPF_CNPJ, u.DH_TIMESTAMP, u.ID_APPLE, u.ID_FACEBOOK, u.ID_GOOGLE, u.ID_USUARIO, u.NOME, u.SENHA, u.TOKEN
+        FROM USUARIO AS u
+        WHERE u.EMAIL == @__emailUsuario_0), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, USUARIO>, 
+    PedagioPayPortalUsuario.Models.PEDAGIOPAYContext, 
+    False, 
+    False, 
+    True
+)
+    .SingleOrDefault()"'
+2024-03-02T00:00:09.1730240-03:00 [DBG] Creating DbCommand for '"ExecuteReader"'.
+2024-03-02T00:00:09.1836443-03:00 [DBG] Creating DbConnection.
+2024-03-02T00:00:09.2947446-03:00 [DBG] Created DbConnection. (93ms).
+2024-03-02T00:00:09.3328847-03:00 [DBG] Created DbCommand for '"ExecuteReader"' (149ms).
+2024-03-02T00:00:09.3571137-03:00 [DBG] Initialized DbCommand for '"ExecuteReader"' (187ms).
+2024-03-02T00:00:09.3695282-03:00 [DBG] Opening connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T00:00:11.0573357-03:00 [DBG] Opened connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T00:00:11.0866266-03:00 [DBG] Executing DbCommand [Parameters=["@__emailUsuario_0='?' (Size = 100) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[EMAIL], [u].[BL_VALIDADO], [u].[CD_STATUS], [u].[CELULAR], [u].[CODIGO_VALIDACAO], [u].[CPF_CNPJ], [u].[DH_TIMESTAMP], [u].[ID_APPLE], [u].[ID_FACEBOOK], [u].[ID_GOOGLE], [u].[ID_USUARIO], [u].[NOME], [u].[SENHA], [u].[TOKEN]
+FROM [USUARIO] AS [u]
+WHERE [u].[EMAIL] = @__emailUsuario_0"
+2024-03-02T00:00:11.4519460-03:00 [INF] Executed DbCommand ("374"ms) [Parameters=["@__emailUsuario_0='?' (Size = 100) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[EMAIL], [u].[BL_VALIDADO], [u].[CD_STATUS], [u].[CELULAR], [u].[CODIGO_VALIDACAO], [u].[CPF_CNPJ], [u].[DH_TIMESTAMP], [u].[ID_APPLE], [u].[ID_FACEBOOK], [u].[ID_GOOGLE], [u].[ID_USUARIO], [u].[NOME], [u].[SENHA], [u].[TOKEN]
+FROM [USUARIO] AS [u]
+WHERE [u].[EMAIL] = @__emailUsuario_0"
+2024-03-02T00:00:11.4832685-03:00 [DBG] Closing data reader to '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T00:00:11.5090341-03:00 [DBG] A data reader for '"PEDAGIOPAY"' on server '"192.168.140.157"' is being disposed after spending 31ms reading results.
+2024-03-02T00:00:11.5226307-03:00 [DBG] Closing connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T00:00:11.5500982-03:00 [DBG] Closed connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"' (26ms).
+2024-03-02T00:00:12.9148296-03:00 [INF] Iniciar envio de email
+2024-03-02T00:00:12.9169390-03:00 [INF] Email usuario : pedagiopay.email.fadami@gmail.com
+2024-03-02T00:00:12.9360026-03:00 [INF] Objeto email: {"Remetente":"pegadiopay.email.fadami@gmail.com","AliasRemetente":"PedagioPay","Assunto":"Confima\u00E7\u00E3o de email | Pedagio Pay","Texto":null,"CorpoHTML":false,"Destinatarios":[],"Cc":[],"Cco":[],"Anexos":[],"Imagens":[],"SMTP":{"Servidor":"smtp.gmail.com","Porta":587,"Login":"pegadiopay.email.fadami@gmail.com","Senha":"gmpb vhax fntv tscq","RequerAutenticacao":false,"UtilizaSSL":false}}
+2024-03-02T00:00:13.8244638-03:00 [INF] Executed action "PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)" in 8970.9274ms
+2024-03-02T00:00:13.8307308-03:00 [INF] Executed endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"'
+2024-03-02T00:00:13.8353535-03:00 [ERR] An unhandled exception has occurred while executing the request.
+2024-03-02T00:00:13.9182223-03:00 [DBG] Connection id ""0HN1QCJA0S6C6"" completed keep alive response.
+2024-03-02T00:00:13.9306767-03:00 [DBG] '"PEDAGIOPAYContext"' disposed.
+2024-03-02T00:00:13.9606846-03:00 [DBG] Disposing connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T00:00:13.9695414-03:00 [DBG] Disposed connection to database '""' on server '""' (9ms).
+2024-03-02T00:00:13.9738861-03:00 [INF] Request finished HTTP/1.1 POST http://localhost:3001/Usuario/Cadastro application/json-patch+json 156 - 500 - text/plain;+charset=utf-8 9381.3520ms
+2024-03-02T00:03:09.2028512-03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-03-02T00:03:09.3323309-03:00 [DBG] Hosting starting
+2024-03-02T00:03:09.3910396-03:00 [INF] User profile is available. Using '"C:\Users\fadami.FDM-058\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-02T00:03:09.3990785-03:00 [DBG] Reading data from file '"C:\Users\fadami.FDM-058\AppData\Local\ASP.NET\DataProtection-Keys\key-ae5c53c0-d26a-4a4a-a697-3522b7f9cd35.xml"'.
+2024-03-02T00:03:09.4201872-03:00 [DBG] Found key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35}.
+2024-03-02T00:03:09.4408846-03:00 [DBG] Considering key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} with expiration date 2024-03-19 16:36:08Z as default key.
+2024-03-02T00:03:09.4491671-03:00 [DBG] Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+2024-03-02T00:03:09.4579795-03:00 [DBG] Decrypting secret element using Windows DPAPI.
+2024-03-02T00:03:09.4619237-03:00 [DBG] Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+2024-03-02T00:03:09.4854785-03:00 [DBG] Opening CNG algorithm '"AES"' from provider 'null' with chaining mode CBC.
+2024-03-02T00:03:09.5058854-03:00 [DBG] Opening CNG algorithm '"SHA256"' from provider 'null' with HMAC.
+2024-03-02T00:03:09.5195406-03:00 [DBG] Using key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} as the default key.
+2024-03-02T00:03:09.5232642-03:00 [DBG] Key ring with default key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} was loaded during application startup.
+2024-03-02T00:03:09.6879389-03:00 [INF] Now listening on: "http://localhost:3001"
+2024-03-02T00:03:09.6904781-03:00 [DBG] Loaded hosting startup assembly "PedagioPayPortalUsuario"
+2024-03-02T00:03:09.6930071-03:00 [DBG] Loaded hosting startup assembly "Microsoft.AspNetCore.Watch.BrowserRefresh"
+2024-03-02T00:03:09.6959331-03:00 [DBG] Loaded hosting startup assembly "Microsoft.WebTools.BrowserLink.Net"
+2024-03-02T00:03:09.6993558-03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-02T00:03:09.7010728-03:00 [INF] Hosting environment: "Development"
+2024-03-02T00:03:09.7034652-03:00 [INF] Content root path: "C:\Users\fadami.FDM-058\Desktop\PedagioPayPortalUsuarioBack\PedagioPayPortalUsuario\"
+2024-03-02T00:03:09.7067358-03:00 [DBG] Hosting started
+2024-03-02T00:03:09.9067639-03:00 [DBG] Connection id ""0HN1QCL5B2NV4"" accepted.
+2024-03-02T00:03:09.9067725-03:00 [DBG] Connection id ""0HN1QCL5B2NV5"" accepted.
+2024-03-02T00:03:09.9115275-03:00 [DBG] Connection id ""0HN1QCL5B2NV4"" started.
+2024-03-02T00:03:09.9125084-03:00 [DBG] Connection id ""0HN1QCL5B2NV5"" started.
+2024-03-02T00:03:09.9277508-03:00 [DBG] Connection id ""0HN1QCL5B2NV4"" received FIN.
+2024-03-02T00:03:09.9287484-03:00 [DBG] Connection id ""0HN1QCL5B2NV5"" received FIN.
+2024-03-02T00:03:09.9356478-03:00 [DBG] Connection id ""0HN1QCL5B2NV4"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2024-03-02T00:03:09.9415415-03:00 [DBG] Connection id ""0HN1QCL5B2NV4"" disconnecting.
+2024-03-02T00:03:09.9414726-03:00 [DBG] Connection id ""0HN1QCL5B2NV5"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2024-03-02T00:03:09.9508334-03:00 [DBG] Connection id ""0HN1QCL5B2NV5"" disconnecting.
+2024-03-02T00:03:09.9532521-03:00 [DBG] Connection id ""0HN1QCL5B2NV5"" stopped.
+2024-03-02T00:03:09.9526773-03:00 [DBG] Connection id ""0HN1QCL5B2NV4"" stopped.
+2024-03-02T00:03:10.4659335-03:00 [DBG] Connection id ""0HN1QCL5B2NV6"" accepted.
+2024-03-02T00:03:10.4792354-03:00 [DBG] Connection id ""0HN1QCL5B2NV6"" started.
+2024-03-02T00:03:10.5506897-03:00 [DBG] Connection id ""0HN1QCL5B2NV7"" accepted.
+2024-03-02T00:03:10.5882013-03:00 [DBG] Connection id ""0HN1QCL5B2NV7"" started.
+2024-03-02T00:03:10.6816166-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/swagger/index.html - -
+2024-03-02T00:03:11.0161565-03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-03-02T00:03:11.5991193-03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-03-02T00:03:11.6865114-03:00 [DBG] Connection id ""0HN1QCL5B2NV8"" accepted.
+2024-03-02T00:03:11.6505280-03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2024-03-02T00:03:11.6928504-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/_framework/aspnetcore-browser-refresh.js - -
+2024-03-02T00:03:11.7102168-03:00 [DBG] Connection id ""0HN1QCL5B2NV6"" completed keep alive response.
+2024-03-02T00:03:11.7211204-03:00 [DBG] Connection id ""0HN1QCL5B2NV7"" completed keep alive response.
+2024-03-02T00:03:11.7258221-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/_framework/aspnetcore-browser-refresh.js - - - 200 13782 application/javascript;+charset=utf-8 33.1393ms
+2024-03-02T00:03:11.7069436-03:00 [DBG] Connection id ""0HN1QCL5B2NV8"" started.
+2024-03-02T00:03:11.7374763-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/_vs/browserLink - -
+2024-03-02T00:03:11.7246104-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/swagger/index.html - - - 200 - text/html;charset=utf-8 1053.8797ms
+2024-03-02T00:03:11.9327022-03:00 [DBG] Connection id ""0HN1QCL5B2NV8"" completed keep alive response.
+2024-03-02T00:03:11.9373683-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 199.7852ms
+2024-03-02T00:03:12.0210519-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/swagger/v1/swagger.json - -
+2024-03-02T00:03:12.3530500-03:00 [DBG] Connection id ""0HN1QCL5B2NV8"" completed keep alive response.
+2024-03-02T00:03:12.3582565-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 337.1705ms
+2024-03-02T00:03:26.6102148-03:00 [INF] Request starting HTTP/1.1 POST http://localhost:3001/Usuario/Cadastro application/json-patch+json 156
+2024-03-02T00:03:26.6178687-03:00 [DBG] "POST" requests are not supported
+2024-03-02T00:03:26.6213515-03:00 [DBG] The request has an origin header: '"http://localhost:3001"'.
+2024-03-02T00:03:26.6274819-03:00 [INF] CORS policy execution successful.
+2024-03-02T00:03:26.6329848-03:00 [WRN] Failed to determine the https port for redirect.
+2024-03-02T00:03:26.6705905-03:00 [DBG] 1 candidate(s) found for the request path '"/Usuario/Cadastro"'
+2024-03-02T00:03:26.6834992-03:00 [DBG] Endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"' with route pattern '"Usuario/Cadastro"' is valid for the request path '"/Usuario/Cadastro"'
+2024-03-02T00:03:26.6884663-03:00 [DBG] Request matched endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"'
+2024-03-02T00:03:26.7009720-03:00 [INF] Executing endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"'
+2024-03-02T00:03:26.7621904-03:00 [INF] Route matched with "{action = \"CadastraUsuario\", controller = \"Usuario\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[PedagioPayPortalUsuario.Models.USUARIO]] CadastraUsuario(PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto)" on controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario").
+2024-03-02T00:03:26.7690476-03:00 [DBG] Execution plan of "authorization" filters (in the following order): ["None"]
+2024-03-02T00:03:26.7729400-03:00 [DBG] Execution plan of "resource" filters (in the following order): ["None"]
+2024-03-02T00:03:26.7790462-03:00 [DBG] Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-03-02T00:03:26.7845181-03:00 [DBG] Execution plan of "exception" filters (in the following order): ["None"]
+2024-03-02T00:03:26.7885694-03:00 [DBG] Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-03-02T00:03:26.7935120-03:00 [DBG] Executing controller factory for controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario")
+2024-03-02T00:03:27.0095207-03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-03-02T00:03:27.3078465-03:00 [DBG] Executed controller factory for controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario")
+2024-03-02T00:03:27.3179645-03:00 [DBG] Attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' ...
+2024-03-02T00:03:27.3263022-03:00 [DBG] Attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' using the name '""' in request data ...
+2024-03-02T00:03:27.3312622-03:00 [DBG] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter"' for content type '"application/json-patch+json"'.
+2024-03-02T00:03:27.3352230-03:00 [DBG] Selected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter"' for content type '"application/json-patch+json"'.
+2024-03-02T00:03:27.3630322-03:00 [DBG] Connection id ""0HN1QCL5B2NV8"", Request id ""0HN1QCL5B2NV8:00000004"": started reading request body.
+2024-03-02T00:03:27.3673783-03:00 [DBG] Connection id ""0HN1QCL5B2NV8"", Request id ""0HN1QCL5B2NV8:00000004"": done reading request body.
+2024-03-02T00:03:27.5775050-03:00 [DBG] Done attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T00:03:27.5841461-03:00 [DBG] Done attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T00:03:27.5934089-03:00 [DBG] Attempting to validate the bound parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' ...
+2024-03-02T00:03:27.6150435-03:00 [DBG] Done attempting to validate the bound parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T00:03:28.8503987-03:00 [WRN] The property '"ID_CONCESSAO"' on entity type '"CONCESSAO"' is of type 'byte', but is set up to use a SQL Server identity column; this requires that values starting at 255 and counting down will be used for temporary key values. A temporary key value is needed for every entity inserted in a single call to 'SaveChanges'. Care must be taken that these values do not collide with real key values.
+2024-03-02T00:03:29.2255931-03:00 [DBG] Entity Framework Core "7.0.0" initialized '"PEDAGIOPAYContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"7.0.0"' with options: "None"
+2024-03-02T00:03:29.3670202-03:00 [DBG] Compiling query expression: "
+"'"DbSet<USUARIO>()
+    .FirstOrDefault(x => x.EMAIL == __emailUsuario_0)"'
+2024-03-02T00:03:30.0986866-03:00 [DBG] Generated query execution expression: "
+"'"queryContext => new SingleQueryingEnumerable<USUARIO>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: USUARIO.EMAIL (string) Required PK AfterSave:Throw MaxLength(100) Ansi, 0], [Property: USUARIO.BL_VALIDADO (bool?) ValueGenerated.OnAdd, 1], [Property: USUARIO.CD_STATUS (bool?) ValueGenerated.OnAdd, 2], [Property: USUARIO.CELULAR (string) MaxLength(12) Ansi, 3], [Property: USUARIO.CODIGO_VALIDACAO (string) MaxLength(4) Ansi, 4], [Property: USUARIO.CPF_CNPJ (string) MaxLength(20) Ansi, 5], [Property: USUARIO.DH_TIMESTAMP (DateTime?) ValueGenerated.OnAdd, 6], [Property: USUARIO.ID_APPLE (string) MaxLength(50) Ansi, 7], [Property: USUARIO.ID_FACEBOOK (string) MaxLength(50) Ansi, 8], [Property: USUARIO.ID_GOOGLE (string) MaxLength(50) Ansi, 9], [Property: USUARIO.ID_USUARIO (int) Required ValueGenerated.OnAdd, 10], [Property: USUARIO.NOME (string) MaxLength(50) Ansi, 11], [Property: USUARIO.SENHA (string) MaxLength(100) Ansi, 12], [Property: USUARIO.TOKEN (string) MaxLength(500) Ansi, 13] }
+        SELECT TOP(1) u.EMAIL, u.BL_VALIDADO, u.CD_STATUS, u.CELULAR, u.CODIGO_VALIDACAO, u.CPF_CNPJ, u.DH_TIMESTAMP, u.ID_APPLE, u.ID_FACEBOOK, u.ID_GOOGLE, u.ID_USUARIO, u.NOME, u.SENHA, u.TOKEN
+        FROM USUARIO AS u
+        WHERE u.EMAIL == @__emailUsuario_0), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, USUARIO>, 
+    PedagioPayPortalUsuario.Models.PEDAGIOPAYContext, 
+    False, 
+    False, 
+    True
+)
+    .SingleOrDefault()"'
+2024-03-02T00:03:30.2134224-03:00 [DBG] Creating DbCommand for '"ExecuteReader"'.
+2024-03-02T00:03:30.2208116-03:00 [DBG] Creating DbConnection.
+2024-03-02T00:03:30.2982038-03:00 [DBG] Created DbConnection. (71ms).
+2024-03-02T00:03:30.3157710-03:00 [DBG] Created DbCommand for '"ExecuteReader"' (99ms).
+2024-03-02T00:03:30.3469658-03:00 [DBG] Initialized DbCommand for '"ExecuteReader"' (138ms).
+2024-03-02T00:03:30.3586426-03:00 [DBG] Opening connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T00:03:32.0870405-03:00 [DBG] Opened connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T00:03:32.1349733-03:00 [DBG] Executing DbCommand [Parameters=["@__emailUsuario_0='?' (Size = 100) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[EMAIL], [u].[BL_VALIDADO], [u].[CD_STATUS], [u].[CELULAR], [u].[CODIGO_VALIDACAO], [u].[CPF_CNPJ], [u].[DH_TIMESTAMP], [u].[ID_APPLE], [u].[ID_FACEBOOK], [u].[ID_GOOGLE], [u].[ID_USUARIO], [u].[NOME], [u].[SENHA], [u].[TOKEN]
+FROM [USUARIO] AS [u]
+WHERE [u].[EMAIL] = @__emailUsuario_0"
+2024-03-02T00:03:32.5281155-03:00 [INF] Executed DbCommand ("423"ms) [Parameters=["@__emailUsuario_0='?' (Size = 100) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[EMAIL], [u].[BL_VALIDADO], [u].[CD_STATUS], [u].[CELULAR], [u].[CODIGO_VALIDACAO], [u].[CPF_CNPJ], [u].[DH_TIMESTAMP], [u].[ID_APPLE], [u].[ID_FACEBOOK], [u].[ID_GOOGLE], [u].[ID_USUARIO], [u].[NOME], [u].[SENHA], [u].[TOKEN]
+FROM [USUARIO] AS [u]
+WHERE [u].[EMAIL] = @__emailUsuario_0"
+2024-03-02T00:03:32.5527079-03:00 [DBG] Closing data reader to '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T00:03:32.5802879-03:00 [DBG] A data reader for '"PEDAGIOPAY"' on server '"192.168.140.157"' is being disposed after spending 30ms reading results.
+2024-03-02T00:03:32.5944284-03:00 [DBG] Closing connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T00:03:32.6184181-03:00 [DBG] Closed connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"' (28ms).
+2024-03-02T00:03:33.9152818-03:00 [INF] Iniciar envio de email
+2024-03-02T00:03:33.9173739-03:00 [INF] Email usuario : pedagiopay.email.fadami@gmail.com
+2024-03-02T00:03:33.9414346-03:00 [INF] Objeto email: {"Remetente":"pegadiopay.email.fadami@gmail.com","AliasRemetente":"PedagioPay","Assunto":"Confima\u00E7\u00E3o de email | Pedagio Pay","Texto":null,"CorpoHTML":false,"Destinatarios":[],"Cc":[],"Cco":[],"Anexos":[],"Imagens":[],"SMTP":{"Servidor":"smtp.gmail.com","Porta":587,"Login":"pegadiopay.email.fadami@gmail.com","Senha":"gmpb vhax fntv tscq","RequerAutenticacao":false,"UtilizaSSL":false}}
+2024-03-02T00:03:35.0942529-03:00 [INF] Executed action "PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)" in 8293.8725ms
+2024-03-02T00:03:35.0999304-03:00 [INF] Executed endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"'
+2024-03-02T00:03:35.1040657-03:00 [ERR] An unhandled exception has occurred while executing the request.
+2024-03-02T00:03:35.1930301-03:00 [DBG] Connection id ""0HN1QCL5B2NV8"" completed keep alive response.
+2024-03-02T00:03:35.2054240-03:00 [DBG] '"PEDAGIOPAYContext"' disposed.
+2024-03-02T00:03:35.2367100-03:00 [DBG] Disposing connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T00:03:35.2467302-03:00 [DBG] Disposed connection to database '""' on server '""' (10ms).
+2024-03-02T00:03:35.2513870-03:00 [INF] Request finished HTTP/1.1 POST http://localhost:3001/Usuario/Cadastro application/json-patch+json 156 - 500 - text/plain;+charset=utf-8 8641.1608ms
+2024-03-02T00:08:43.2024017-03:00 [DBG] Connection id ""0HN1QCL5B2NV6"" received FIN.
+2024-03-02T00:08:43.2126592-03:00 [DBG] Connection id ""0HN1QCL5B2NV8"" received FIN.
+2024-03-02T00:08:43.2171562-03:00 [DBG] Connection id ""0HN1QCL5B2NV6"" disconnecting.
+2024-03-02T00:08:43.2200718-03:00 [DBG] Connection id ""0HN1QCL5B2NV8"" disconnecting.
+2024-03-02T00:08:43.2041746-03:00 [DBG] Connection id ""0HN1QCL5B2NV7"" received FIN.
+2024-03-02T00:08:43.2315250-03:00 [DBG] Connection id ""0HN1QCL5B2NV7"" disconnecting.
+2024-03-02T00:08:43.2224564-03:00 [DBG] Connection id ""0HN1QCL5B2NV6"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2024-03-02T00:08:43.2269088-03:00 [DBG] Connection id ""0HN1QCL5B2NV8"" stopped.
+2024-03-02T00:08:43.2347033-03:00 [DBG] Connection id ""0HN1QCL5B2NV7"" stopped.
+2024-03-02T00:08:43.2392073-03:00 [DBG] Connection id ""0HN1QCL5B2NV6"" stopped.
+2024-03-02T00:08:43.2402521-03:00 [DBG] Connection id ""0HN1QCL5B2NV8"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2024-03-02T00:08:43.2444053-03:00 [DBG] Connection id ""0HN1QCL5B2NV7"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2024-03-02T00:14:53.4756443-03:00 [DBG] Config reload token fired. Checking for changes...
+2024-03-02T00:14:53.7355563-03:00 [DBG] Config reload token fired. Checking for changes...
+2024-03-02T00:15:19.8046661-03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-03-02T00:15:19.9119680-03:00 [DBG] Hosting starting
+2024-03-02T00:15:19.9694841-03:00 [INF] User profile is available. Using '"C:\Users\fadami.FDM-058\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-02T00:15:19.9771771-03:00 [DBG] Reading data from file '"C:\Users\fadami.FDM-058\AppData\Local\ASP.NET\DataProtection-Keys\key-ae5c53c0-d26a-4a4a-a697-3522b7f9cd35.xml"'.
+2024-03-02T00:15:19.9922118-03:00 [DBG] Found key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35}.
+2024-03-02T00:15:20.0113979-03:00 [DBG] Considering key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} with expiration date 2024-03-19 16:36:08Z as default key.
+2024-03-02T00:15:20.0181794-03:00 [DBG] Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+2024-03-02T00:15:20.0267114-03:00 [DBG] Decrypting secret element using Windows DPAPI.
+2024-03-02T00:15:20.0309617-03:00 [DBG] Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+2024-03-02T00:15:20.0435402-03:00 [DBG] Opening CNG algorithm '"AES"' from provider 'null' with chaining mode CBC.
+2024-03-02T00:15:20.0501658-03:00 [DBG] Opening CNG algorithm '"SHA256"' from provider 'null' with HMAC.
+2024-03-02T00:15:20.0567014-03:00 [DBG] Using key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} as the default key.
+2024-03-02T00:15:20.0610472-03:00 [DBG] Key ring with default key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} was loaded during application startup.
+2024-03-02T00:15:20.2057116-03:00 [DBG] Connection id ""0HN1QCRUVPR47"" received FIN.
+2024-03-02T00:15:20.2218353-03:00 [DBG] Connection id ""0HN1QCRUVPR47"" accepted.
+2024-03-02T00:15:20.2227410-03:00 [INF] Now listening on: "http://localhost:3001"
+2024-03-02T00:15:20.2266749-03:00 [DBG] Connection id ""0HN1QCRUVPR47"" started.
+2024-03-02T00:15:20.2278867-03:00 [DBG] Loaded hosting startup assembly "PedagioPayPortalUsuario"
+2024-03-02T00:15:20.2340486-03:00 [DBG] Loaded hosting startup assembly "Microsoft.AspNetCore.Watch.BrowserRefresh"
+2024-03-02T00:15:20.2370591-03:00 [DBG] Loaded hosting startup assembly "Microsoft.WebTools.BrowserLink.Net"
+2024-03-02T00:15:20.2374221-03:00 [DBG] Connection id ""0HN1QCRUVPR47"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2024-03-02T00:15:20.2403005-03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-02T00:15:20.2467293-03:00 [DBG] Connection id ""0HN1QCRUVPR47"" disconnecting.
+2024-03-02T00:15:20.2478696-03:00 [INF] Hosting environment: "Development"
+2024-03-02T00:15:20.2542262-03:00 [INF] Content root path: "C:\Users\fadami.FDM-058\Desktop\PedagioPayPortalUsuarioBack\PedagioPayPortalUsuario\"
+2024-03-02T00:15:20.2572548-03:00 [DBG] Hosting started
+2024-03-02T00:15:20.2599972-03:00 [DBG] Connection id ""0HN1QCRUVPR47"" stopped.
+2024-03-02T00:15:21.6309155-03:00 [DBG] Connection id ""0HN1QCRUVPR48"" accepted.
+2024-03-02T00:15:21.7533450-03:00 [DBG] Connection id ""0HN1QCRUVPR49"" accepted.
+2024-03-02T00:15:21.7494146-03:00 [DBG] Connection id ""0HN1QCRUVPR48"" started.
+2024-03-02T00:15:21.7571092-03:00 [DBG] Connection id ""0HN1QCRUVPR49"" started.
+2024-03-02T00:15:21.8401763-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/swagger/index.html - -
+2024-03-02T00:15:22.0841216-03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-03-02T00:15:22.4320784-03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-03-02T00:15:22.4861357-03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2024-03-02T00:15:22.4925677-03:00 [DBG] Connection id ""0HN1QCRUVPR48"" completed keep alive response.
+2024-03-02T00:15:22.5125302-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/_vs/browserLink - -
+2024-03-02T00:15:22.5308239-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/swagger/index.html - - - 200 - text/html;charset=utf-8 698.1415ms
+2024-03-02T00:15:22.5383562-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/_framework/aspnetcore-browser-refresh.js - -
+2024-03-02T00:15:22.5550017-03:00 [DBG] Connection id ""0HN1QCRUVPR48"" completed keep alive response.
+2024-03-02T00:15:22.5586088-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/_framework/aspnetcore-browser-refresh.js - - - 200 13782 application/javascript;+charset=utf-8 20.1376ms
+2024-03-02T00:15:22.6370501-03:00 [DBG] Connection id ""0HN1QCRUVPR49"" completed keep alive response.
+2024-03-02T00:15:22.6413583-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 133.0380ms
+2024-03-02T00:15:22.7298370-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/swagger/v1/swagger.json - -
+2024-03-02T00:15:22.9999252-03:00 [DBG] Connection id ""0HN1QCRUVPR49"" completed keep alive response.
+2024-03-02T00:15:23.0059524-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 276.0718ms
+2024-03-02T00:15:46.5374388-03:00 [INF] Request starting HTTP/1.1 POST http://localhost:3001/Usuario/Cadastro application/json-patch+json 156
+2024-03-02T00:15:46.5459314-03:00 [DBG] "POST" requests are not supported
+2024-03-02T00:15:46.5542368-03:00 [DBG] The request has an origin header: '"http://localhost:3001"'.
+2024-03-02T00:15:46.5584667-03:00 [INF] CORS policy execution successful.
+2024-03-02T00:15:46.5659564-03:00 [WRN] Failed to determine the https port for redirect.
+2024-03-02T00:15:46.6139275-03:00 [DBG] 1 candidate(s) found for the request path '"/Usuario/Cadastro"'
+2024-03-02T00:15:46.6259491-03:00 [DBG] Endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"' with route pattern '"Usuario/Cadastro"' is valid for the request path '"/Usuario/Cadastro"'
+2024-03-02T00:15:46.6309774-03:00 [DBG] Request matched endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"'
+2024-03-02T00:15:46.6364607-03:00 [INF] Executing endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"'
+2024-03-02T00:15:46.6933185-03:00 [INF] Route matched with "{action = \"CadastraUsuario\", controller = \"Usuario\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[PedagioPayPortalUsuario.Models.USUARIO]] CadastraUsuario(PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto)" on controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario").
+2024-03-02T00:15:46.6997060-03:00 [DBG] Execution plan of "authorization" filters (in the following order): ["None"]
+2024-03-02T00:15:46.7037859-03:00 [DBG] Execution plan of "resource" filters (in the following order): ["None"]
+2024-03-02T00:15:46.7094408-03:00 [DBG] Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-03-02T00:15:46.7146957-03:00 [DBG] Execution plan of "exception" filters (in the following order): ["None"]
+2024-03-02T00:15:46.7184088-03:00 [DBG] Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-03-02T00:15:46.7240954-03:00 [DBG] Executing controller factory for controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario")
+2024-03-02T00:15:46.9588926-03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-03-02T00:15:47.2331527-03:00 [DBG] Executed controller factory for controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario")
+2024-03-02T00:15:47.2457343-03:00 [DBG] Attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' ...
+2024-03-02T00:15:47.2528082-03:00 [DBG] Attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' using the name '""' in request data ...
+2024-03-02T00:15:47.2595176-03:00 [DBG] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter"' for content type '"application/json-patch+json"'.
+2024-03-02T00:15:47.2639578-03:00 [DBG] Selected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter"' for content type '"application/json-patch+json"'.
+2024-03-02T00:15:47.2777160-03:00 [DBG] Connection id ""0HN1QCRUVPR49"", Request id ""0HN1QCRUVPR49:00000004"": started reading request body.
+2024-03-02T00:15:47.2818684-03:00 [DBG] Connection id ""0HN1QCRUVPR49"", Request id ""0HN1QCRUVPR49:00000004"": done reading request body.
+2024-03-02T00:15:47.4866262-03:00 [DBG] Done attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T00:15:47.4907599-03:00 [DBG] Done attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T00:15:47.4948229-03:00 [DBG] Attempting to validate the bound parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' ...
+2024-03-02T00:15:47.5111757-03:00 [DBG] Done attempting to validate the bound parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T00:15:48.6794782-03:00 [WRN] The property '"ID_CONCESSAO"' on entity type '"CONCESSAO"' is of type 'byte', but is set up to use a SQL Server identity column; this requires that values starting at 255 and counting down will be used for temporary key values. A temporary key value is needed for every entity inserted in a single call to 'SaveChanges'. Care must be taken that these values do not collide with real key values.
+2024-03-02T00:15:49.0487753-03:00 [DBG] Entity Framework Core "7.0.0" initialized '"PEDAGIOPAYContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"7.0.0"' with options: "None"
+2024-03-02T00:15:49.1914763-03:00 [DBG] Compiling query expression: "
+"'"DbSet<USUARIO>()
+    .FirstOrDefault(x => x.EMAIL == __emailUsuario_0)"'
+2024-03-02T00:15:49.8363265-03:00 [DBG] Generated query execution expression: "
+"'"queryContext => new SingleQueryingEnumerable<USUARIO>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: USUARIO.EMAIL (string) Required PK AfterSave:Throw MaxLength(100) Ansi, 0], [Property: USUARIO.BL_VALIDADO (bool?) ValueGenerated.OnAdd, 1], [Property: USUARIO.CD_STATUS (bool?) ValueGenerated.OnAdd, 2], [Property: USUARIO.CELULAR (string) MaxLength(12) Ansi, 3], [Property: USUARIO.CODIGO_VALIDACAO (string) MaxLength(4) Ansi, 4], [Property: USUARIO.CPF_CNPJ (string) MaxLength(20) Ansi, 5], [Property: USUARIO.DH_TIMESTAMP (DateTime?) ValueGenerated.OnAdd, 6], [Property: USUARIO.ID_APPLE (string) MaxLength(50) Ansi, 7], [Property: USUARIO.ID_FACEBOOK (string) MaxLength(50) Ansi, 8], [Property: USUARIO.ID_GOOGLE (string) MaxLength(50) Ansi, 9], [Property: USUARIO.ID_USUARIO (int) Required ValueGenerated.OnAdd, 10], [Property: USUARIO.NOME (string) MaxLength(50) Ansi, 11], [Property: USUARIO.SENHA (string) MaxLength(100) Ansi, 12], [Property: USUARIO.TOKEN (string) MaxLength(500) Ansi, 13] }
+        SELECT TOP(1) u.EMAIL, u.BL_VALIDADO, u.CD_STATUS, u.CELULAR, u.CODIGO_VALIDACAO, u.CPF_CNPJ, u.DH_TIMESTAMP, u.ID_APPLE, u.ID_FACEBOOK, u.ID_GOOGLE, u.ID_USUARIO, u.NOME, u.SENHA, u.TOKEN
+        FROM USUARIO AS u
+        WHERE u.EMAIL == @__emailUsuario_0), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, USUARIO>, 
+    PedagioPayPortalUsuario.Models.PEDAGIOPAYContext, 
+    False, 
+    False, 
+    True
+)
+    .SingleOrDefault()"'
+2024-03-02T00:15:49.9411907-03:00 [DBG] Creating DbCommand for '"ExecuteReader"'.
+2024-03-02T00:15:49.9499676-03:00 [DBG] Creating DbConnection.
+2024-03-02T00:15:50.0301687-03:00 [DBG] Created DbConnection. (69ms).
+2024-03-02T00:15:50.0494123-03:00 [DBG] Created DbCommand for '"ExecuteReader"' (102ms).
+2024-03-02T00:15:50.0715730-03:00 [DBG] Initialized DbCommand for '"ExecuteReader"' (132ms).
+2024-03-02T00:15:50.0822155-03:00 [DBG] Opening connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T00:15:51.9680452-03:00 [DBG] Opened connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T00:15:51.9943760-03:00 [DBG] Executing DbCommand [Parameters=["@__emailUsuario_0='?' (Size = 100) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[EMAIL], [u].[BL_VALIDADO], [u].[CD_STATUS], [u].[CELULAR], [u].[CODIGO_VALIDACAO], [u].[CPF_CNPJ], [u].[DH_TIMESTAMP], [u].[ID_APPLE], [u].[ID_FACEBOOK], [u].[ID_GOOGLE], [u].[ID_USUARIO], [u].[NOME], [u].[SENHA], [u].[TOKEN]
+FROM [USUARIO] AS [u]
+WHERE [u].[EMAIL] = @__emailUsuario_0"
+2024-03-02T00:15:52.4034508-03:00 [INF] Executed DbCommand ("415"ms) [Parameters=["@__emailUsuario_0='?' (Size = 100) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[EMAIL], [u].[BL_VALIDADO], [u].[CD_STATUS], [u].[CELULAR], [u].[CODIGO_VALIDACAO], [u].[CPF_CNPJ], [u].[DH_TIMESTAMP], [u].[ID_APPLE], [u].[ID_FACEBOOK], [u].[ID_GOOGLE], [u].[ID_USUARIO], [u].[NOME], [u].[SENHA], [u].[TOKEN]
+FROM [USUARIO] AS [u]
+WHERE [u].[EMAIL] = @__emailUsuario_0"
+2024-03-02T00:15:52.4308063-03:00 [DBG] Closing data reader to '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T00:15:52.4560473-03:00 [DBG] A data reader for '"PEDAGIOPAY"' on server '"192.168.140.157"' is being disposed after spending 29ms reading results.
+2024-03-02T00:15:52.4695688-03:00 [DBG] Closing connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T00:15:52.4916231-03:00 [DBG] Closed connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"' (21ms).
+2024-03-02T00:15:53.7676313-03:00 [INF] Iniciar envio de email
+2024-03-02T00:15:53.7702096-03:00 [INF] Email usuario : pedagiopay.email.fadami@gmail.com
+2024-03-02T00:15:53.7873811-03:00 [INF] Objeto email: {"Remetente":"Ped\u00E1gioPay","AliasRemetente":"PedagioPay","Assunto":"Confima\u00E7\u00E3o de email | Pedagio Pay","Texto":null,"CorpoHTML":false,"Destinatarios":[],"Cc":[],"Cco":[],"Anexos":[],"Imagens":[],"SMTP":{"Servidor":"smtp.gmail.com","Porta":587,"Login":"Ped\u00E1gioPay","Senha":"gmpb vhax fntv tscq","RequerAutenticacao":false,"UtilizaSSL":false}}
+2024-03-02T00:15:54.0026375-03:00 [INF] Executed action "PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)" in 7271.8931ms
+2024-03-02T00:15:54.0084210-03:00 [INF] Executed endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"'
+2024-03-02T00:15:54.0124676-03:00 [ERR] An unhandled exception has occurred while executing the request.
+2024-03-02T00:15:54.0915939-03:00 [DBG] Connection id ""0HN1QCRUVPR49"" completed keep alive response.
+2024-03-02T00:15:54.1358625-03:00 [DBG] '"PEDAGIOPAYContext"' disposed.
+2024-03-02T00:15:54.1816498-03:00 [DBG] Disposing connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T00:15:54.1923122-03:00 [DBG] Disposed connection to database '""' on server '""' (8ms).
+2024-03-02T00:15:54.1971690-03:00 [INF] Request finished HTTP/1.1 POST http://localhost:3001/Usuario/Cadastro application/json-patch+json 156 - 500 - text/plain;+charset=utf-8 7659.7142ms
+2024-03-02T00:16:23.7650605-03:00 [DBG] Config reload token fired. Checking for changes...
+2024-03-02T00:16:24.0254642-03:00 [DBG] Config reload token fired. Checking for changes...
+2024-03-02T00:16:28.7853663-03:00 [DBG] Config reload token fired. Checking for changes...
+2024-03-02T00:16:29.0539356-03:00 [DBG] Config reload token fired. Checking for changes...
+2024-03-02T00:17:11.4022644-03:00 [DBG] Config reload token fired. Checking for changes...
+2024-03-02T00:17:11.6618582-03:00 [DBG] Config reload token fired. Checking for changes...
+2024-03-02T00:17:16.7513402-03:00 [DBG] Config reload token fired. Checking for changes...
+2024-03-02T00:17:17.0178155-03:00 [DBG] Config reload token fired. Checking for changes...
+2024-03-02T00:17:27.5173666-03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-03-02T00:17:27.6348668-03:00 [DBG] Hosting starting
+2024-03-02T00:17:27.7007891-03:00 [INF] User profile is available. Using '"C:\Users\fadami.FDM-058\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-02T00:17:27.7085996-03:00 [DBG] Reading data from file '"C:\Users\fadami.FDM-058\AppData\Local\ASP.NET\DataProtection-Keys\key-ae5c53c0-d26a-4a4a-a697-3522b7f9cd35.xml"'.
+2024-03-02T00:17:27.7313927-03:00 [DBG] Found key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35}.
+2024-03-02T00:17:27.7586260-03:00 [DBG] Considering key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} with expiration date 2024-03-19 16:36:08Z as default key.
+2024-03-02T00:17:27.7691033-03:00 [DBG] Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+2024-03-02T00:17:27.7793179-03:00 [DBG] Decrypting secret element using Windows DPAPI.
+2024-03-02T00:17:27.7840537-03:00 [DBG] Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+2024-03-02T00:17:27.7985326-03:00 [DBG] Opening CNG algorithm '"AES"' from provider 'null' with chaining mode CBC.
+2024-03-02T00:17:27.8060242-03:00 [DBG] Opening CNG algorithm '"SHA256"' from provider 'null' with HMAC.
+2024-03-02T00:17:27.8154963-03:00 [DBG] Using key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} as the default key.
+2024-03-02T00:17:27.8195294-03:00 [DBG] Key ring with default key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} was loaded during application startup.
+2024-03-02T00:17:27.9911247-03:00 [INF] Now listening on: "http://localhost:3001"
+2024-03-02T00:17:27.9943204-03:00 [DBG] Loaded hosting startup assembly "PedagioPayPortalUsuario"
+2024-03-02T00:17:27.9964268-03:00 [DBG] Loaded hosting startup assembly "Microsoft.AspNetCore.Watch.BrowserRefresh"
+2024-03-02T00:17:27.9989211-03:00 [DBG] Loaded hosting startup assembly "Microsoft.WebTools.BrowserLink.Net"
+2024-03-02T00:17:28.0015780-03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-02T00:17:28.0042672-03:00 [INF] Hosting environment: "Development"
+2024-03-02T00:17:28.0073454-03:00 [INF] Content root path: "C:\Users\fadami.FDM-058\Desktop\PedagioPayPortalUsuarioBack\PedagioPayPortalUsuario\"
+2024-03-02T00:17:28.0105915-03:00 [DBG] Hosting started
+2024-03-02T00:17:28.2685676-03:00 [DBG] Connection id ""0HN1QCT5523OL"" received FIN.
+2024-03-02T00:17:28.2715175-03:00 [DBG] Connection id ""0HN1QCT5523OK"" received FIN.
+2024-03-02T00:17:28.2960794-03:00 [DBG] Connection id ""0HN1QCT5523OL"" accepted.
+2024-03-02T00:17:28.2709556-03:00 [DBG] Connection id ""0HN1QCT5523OK"" accepted.
+2024-03-02T00:17:28.3025401-03:00 [DBG] Connection id ""0HN1QCT5523OL"" started.
+2024-03-02T00:17:28.3050387-03:00 [DBG] Connection id ""0HN1QCT5523OK"" started.
+2024-03-02T00:17:28.3125326-03:00 [DBG] Connection id ""0HN1QCT5523OL"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2024-03-02T00:17:28.3125247-03:00 [DBG] Connection id ""0HN1QCT5523OK"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2024-03-02T00:17:28.3188938-03:00 [DBG] Connection id ""0HN1QCT5523OL"" disconnecting.
+2024-03-02T00:17:28.3227985-03:00 [DBG] Connection id ""0HN1QCT5523OK"" disconnecting.
+2024-03-02T00:17:28.3362871-03:00 [DBG] Connection id ""0HN1QCT5523OK"" stopped.
+2024-03-02T00:17:28.3362872-03:00 [DBG] Connection id ""0HN1QCT5523OL"" stopped.
+2024-03-02T00:17:29.2724839-03:00 [DBG] Connection id ""0HN1QCT5523OM"" accepted.
+2024-03-02T00:17:29.2921458-03:00 [DBG] Connection id ""0HN1QCT5523OM"" started.
+2024-03-02T00:17:29.3520333-03:00 [DBG] Connection id ""0HN1QCT5523ON"" accepted.
+2024-03-02T00:17:29.3818317-03:00 [DBG] Connection id ""0HN1QCT5523ON"" started.
+2024-03-02T00:17:29.4952437-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/swagger/index.html - -
+2024-03-02T00:17:29.8112280-03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-03-02T00:17:30.1822092-03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-03-02T00:17:30.2398435-03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2024-03-02T00:17:30.2684310-03:00 [DBG] Connection id ""0HN1QCT5523OO"" accepted.
+2024-03-02T00:17:30.3100504-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/_framework/aspnetcore-browser-refresh.js - -
+2024-03-02T00:17:30.2923855-03:00 [DBG] Connection id ""0HN1QCT5523OM"" completed keep alive response.
+2024-03-02T00:17:30.3193423-03:00 [DBG] Connection id ""0HN1QCT5523OO"" started.
+2024-03-02T00:17:30.3276482-03:00 [DBG] Connection id ""0HN1QCT5523ON"" completed keep alive response.
+2024-03-02T00:17:30.3358127-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/swagger/index.html - - - 200 - text/html;charset=utf-8 853.6814ms
+2024-03-02T00:17:30.3389412-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/_framework/aspnetcore-browser-refresh.js - - - 200 13782 application/javascript;+charset=utf-8 28.8468ms
+2024-03-02T00:17:30.3351279-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/_vs/browserLink - -
+2024-03-02T00:17:30.4693053-03:00 [DBG] Connection id ""0HN1QCT5523OO"" completed keep alive response.
+2024-03-02T00:17:30.5301803-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 194.9175ms
+2024-03-02T00:17:30.5617726-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/swagger/v1/swagger.json - -
+2024-03-02T00:17:30.8325881-03:00 [DBG] Connection id ""0HN1QCT5523OO"" completed keep alive response.
+2024-03-02T00:17:30.8434150-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 281.6073ms
+2024-03-02T00:17:51.1107224-03:00 [INF] Request starting HTTP/1.1 POST http://localhost:3001/Usuario/Cadastro application/json-patch+json 156
+2024-03-02T00:17:51.1257954-03:00 [DBG] "POST" requests are not supported
+2024-03-02T00:17:51.1315780-03:00 [DBG] The request has an origin header: '"http://localhost:3001"'.
+2024-03-02T00:17:51.1349857-03:00 [INF] CORS policy execution successful.
+2024-03-02T00:17:51.1405499-03:00 [WRN] Failed to determine the https port for redirect.
+2024-03-02T00:17:51.1818573-03:00 [DBG] 1 candidate(s) found for the request path '"/Usuario/Cadastro"'
+2024-03-02T00:17:51.1925813-03:00 [DBG] Endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"' with route pattern '"Usuario/Cadastro"' is valid for the request path '"/Usuario/Cadastro"'
+2024-03-02T00:17:51.1997837-03:00 [DBG] Request matched endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"'
+2024-03-02T00:17:51.2070622-03:00 [INF] Executing endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"'
+2024-03-02T00:17:51.2631561-03:00 [INF] Route matched with "{action = \"CadastraUsuario\", controller = \"Usuario\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[PedagioPayPortalUsuario.Models.USUARIO]] CadastraUsuario(PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto)" on controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario").
+2024-03-02T00:17:51.2698587-03:00 [DBG] Execution plan of "authorization" filters (in the following order): ["None"]
+2024-03-02T00:17:51.2741242-03:00 [DBG] Execution plan of "resource" filters (in the following order): ["None"]
+2024-03-02T00:17:51.2805534-03:00 [DBG] Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-03-02T00:17:51.2979696-03:00 [DBG] Execution plan of "exception" filters (in the following order): ["None"]
+2024-03-02T00:17:51.3023530-03:00 [DBG] Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-03-02T00:17:51.3096049-03:00 [DBG] Executing controller factory for controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario")
+2024-03-02T00:17:51.5627780-03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-03-02T00:17:51.8427135-03:00 [DBG] Executed controller factory for controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario")
+2024-03-02T00:17:51.8533122-03:00 [DBG] Attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' ...
+2024-03-02T00:17:51.8604382-03:00 [DBG] Attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' using the name '""' in request data ...
+2024-03-02T00:17:51.8662926-03:00 [DBG] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter"' for content type '"application/json-patch+json"'.
+2024-03-02T00:17:51.8704056-03:00 [DBG] Selected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter"' for content type '"application/json-patch+json"'.
+2024-03-02T00:17:51.8866888-03:00 [DBG] Connection id ""0HN1QCT5523OO"", Request id ""0HN1QCT5523OO:00000004"": started reading request body.
+2024-03-02T00:17:51.8907487-03:00 [DBG] Connection id ""0HN1QCT5523OO"", Request id ""0HN1QCT5523OO:00000004"": done reading request body.
+2024-03-02T00:17:52.1044094-03:00 [DBG] Done attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T00:17:52.1085571-03:00 [DBG] Done attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T00:17:52.1133221-03:00 [DBG] Attempting to validate the bound parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' ...
+2024-03-02T00:17:52.1312948-03:00 [DBG] Done attempting to validate the bound parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T00:17:53.3190693-03:00 [WRN] The property '"ID_CONCESSAO"' on entity type '"CONCESSAO"' is of type 'byte', but is set up to use a SQL Server identity column; this requires that values starting at 255 and counting down will be used for temporary key values. A temporary key value is needed for every entity inserted in a single call to 'SaveChanges'. Care must be taken that these values do not collide with real key values.
+2024-03-02T00:17:53.6849286-03:00 [DBG] Entity Framework Core "7.0.0" initialized '"PEDAGIOPAYContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"7.0.0"' with options: "None"
+2024-03-02T00:17:53.8192280-03:00 [DBG] Compiling query expression: "
+"'"DbSet<USUARIO>()
+    .FirstOrDefault(x => x.EMAIL == __emailUsuario_0)"'
+2024-03-02T00:17:54.5077620-03:00 [DBG] Generated query execution expression: "
+"'"queryContext => new SingleQueryingEnumerable<USUARIO>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: USUARIO.EMAIL (string) Required PK AfterSave:Throw MaxLength(100) Ansi, 0], [Property: USUARIO.BL_VALIDADO (bool?) ValueGenerated.OnAdd, 1], [Property: USUARIO.CD_STATUS (bool?) ValueGenerated.OnAdd, 2], [Property: USUARIO.CELULAR (string) MaxLength(12) Ansi, 3], [Property: USUARIO.CODIGO_VALIDACAO (string) MaxLength(4) Ansi, 4], [Property: USUARIO.CPF_CNPJ (string) MaxLength(20) Ansi, 5], [Property: USUARIO.DH_TIMESTAMP (DateTime?) ValueGenerated.OnAdd, 6], [Property: USUARIO.ID_APPLE (string) MaxLength(50) Ansi, 7], [Property: USUARIO.ID_FACEBOOK (string) MaxLength(50) Ansi, 8], [Property: USUARIO.ID_GOOGLE (string) MaxLength(50) Ansi, 9], [Property: USUARIO.ID_USUARIO (int) Required ValueGenerated.OnAdd, 10], [Property: USUARIO.NOME (string) MaxLength(50) Ansi, 11], [Property: USUARIO.SENHA (string) MaxLength(100) Ansi, 12], [Property: USUARIO.TOKEN (string) MaxLength(500) Ansi, 13] }
+        SELECT TOP(1) u.EMAIL, u.BL_VALIDADO, u.CD_STATUS, u.CELULAR, u.CODIGO_VALIDACAO, u.CPF_CNPJ, u.DH_TIMESTAMP, u.ID_APPLE, u.ID_FACEBOOK, u.ID_GOOGLE, u.ID_USUARIO, u.NOME, u.SENHA, u.TOKEN
+        FROM USUARIO AS u
+        WHERE u.EMAIL == @__emailUsuario_0), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, USUARIO>, 
+    PedagioPayPortalUsuario.Models.PEDAGIOPAYContext, 
+    False, 
+    False, 
+    True
+)
+    .SingleOrDefault()"'
+2024-03-02T00:17:54.6232527-03:00 [DBG] Creating DbCommand for '"ExecuteReader"'.
+2024-03-02T00:17:54.6321012-03:00 [DBG] Creating DbConnection.
+2024-03-02T00:17:54.7024492-03:00 [DBG] Created DbConnection. (63ms).
+2024-03-02T00:17:54.7188111-03:00 [DBG] Created DbCommand for '"ExecuteReader"' (93ms).
+2024-03-02T00:17:54.7378223-03:00 [DBG] Initialized DbCommand for '"ExecuteReader"' (117ms).
+2024-03-02T00:17:54.7513567-03:00 [DBG] Opening connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T00:17:56.6545321-03:00 [DBG] Opened connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T00:17:56.6783952-03:00 [DBG] Executing DbCommand [Parameters=["@__emailUsuario_0='?' (Size = 100) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[EMAIL], [u].[BL_VALIDADO], [u].[CD_STATUS], [u].[CELULAR], [u].[CODIGO_VALIDACAO], [u].[CPF_CNPJ], [u].[DH_TIMESTAMP], [u].[ID_APPLE], [u].[ID_FACEBOOK], [u].[ID_GOOGLE], [u].[ID_USUARIO], [u].[NOME], [u].[SENHA], [u].[TOKEN]
+FROM [USUARIO] AS [u]
+WHERE [u].[EMAIL] = @__emailUsuario_0"
+2024-03-02T00:17:57.1066812-03:00 [INF] Executed DbCommand ("434"ms) [Parameters=["@__emailUsuario_0='?' (Size = 100) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[EMAIL], [u].[BL_VALIDADO], [u].[CD_STATUS], [u].[CELULAR], [u].[CODIGO_VALIDACAO], [u].[CPF_CNPJ], [u].[DH_TIMESTAMP], [u].[ID_APPLE], [u].[ID_FACEBOOK], [u].[ID_GOOGLE], [u].[ID_USUARIO], [u].[NOME], [u].[SENHA], [u].[TOKEN]
+FROM [USUARIO] AS [u]
+WHERE [u].[EMAIL] = @__emailUsuario_0"
+2024-03-02T00:17:57.1335968-03:00 [DBG] Closing data reader to '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T00:17:57.1646292-03:00 [DBG] A data reader for '"PEDAGIOPAY"' on server '"192.168.140.157"' is being disposed after spending 30ms reading results.
+2024-03-02T00:17:57.1830296-03:00 [DBG] Closing connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T00:17:57.2072472-03:00 [DBG] Closed connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"' (24ms).
+2024-03-02T00:17:58.3787214-03:00 [INF] Iniciar envio de email
+2024-03-02T00:17:58.3810985-03:00 [INF] Email usuario : pedagiopay.email.fadami@gmail.com
+2024-03-02T00:17:58.3992395-03:00 [INF] Objeto email: {"Remetente":"pegadiopay.email.fadami@gmail.com","AliasRemetente":"PedagioPay","Assunto":"Confima\u00E7\u00E3o de email | Pedagio Pay","Texto":null,"CorpoHTML":false,"Destinatarios":[],"Cc":[],"Cco":[],"Anexos":[],"Imagens":[],"SMTP":{"Servidor":"smtp.gmail.com","Porta":587,"Login":"pegadiopay.email.fadami@gmail.com","Senha":"gmpb vhax fntv tscq","RequerAutenticacao":false,"UtilizaSSL":false}}
+2024-03-02T00:17:59.3319763-03:00 [INF] Executed action "PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)" in 8014.2503ms
+2024-03-02T00:17:59.3378226-03:00 [INF] Executed endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"'
+2024-03-02T00:17:59.3418920-03:00 [ERR] An unhandled exception has occurred while executing the request.
+2024-03-02T00:17:59.4121884-03:00 [DBG] Connection id ""0HN1QCT5523OO"" completed keep alive response.
+2024-03-02T00:17:59.4235566-03:00 [DBG] '"PEDAGIOPAYContext"' disposed.
+2024-03-02T00:17:59.4534576-03:00 [DBG] Disposing connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T00:17:59.4623296-03:00 [DBG] Disposed connection to database '""' on server '""' (8ms).
+2024-03-02T00:17:59.4667628-03:00 [INF] Request finished HTTP/1.1 POST http://localhost:3001/Usuario/Cadastro application/json-patch+json 156 - 500 - text/plain;+charset=utf-8 8356.0240ms
+2024-03-02T15:03:38.4322048-03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-03-02T15:03:38.5543979-03:00 [DBG] Hosting starting
+2024-03-02T15:03:38.8364174-03:00 [INF] User profile is available. Using '"C:\Users\fadami.FDM-058\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-02T15:03:38.8465871-03:00 [DBG] Reading data from file '"C:\Users\fadami.FDM-058\AppData\Local\ASP.NET\DataProtection-Keys\key-ae5c53c0-d26a-4a4a-a697-3522b7f9cd35.xml"'.
+2024-03-02T15:03:38.9126938-03:00 [DBG] Found key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35}.
+2024-03-02T15:03:38.9459482-03:00 [DBG] Considering key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} with expiration date 2024-03-19 16:36:08Z as default key.
+2024-03-02T15:03:38.9528784-03:00 [DBG] Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+2024-03-02T15:03:38.9628169-03:00 [DBG] Decrypting secret element using Windows DPAPI.
+2024-03-02T15:03:38.9670777-03:00 [DBG] Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+2024-03-02T15:03:38.9771899-03:00 [DBG] Opening CNG algorithm '"AES"' from provider 'null' with chaining mode CBC.
+2024-03-02T15:03:38.9833342-03:00 [DBG] Opening CNG algorithm '"SHA256"' from provider 'null' with HMAC.
+2024-03-02T15:03:38.9909258-03:00 [DBG] Using key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} as the default key.
+2024-03-02T15:03:38.9948140-03:00 [DBG] Key ring with default key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} was loaded during application startup.
+2024-03-02T15:03:39.4068734-03:00 [INF] Now listening on: "http://localhost:3001"
+2024-03-02T15:03:39.4097803-03:00 [DBG] Loaded hosting startup assembly "PedagioPayPortalUsuario"
+2024-03-02T15:03:39.4122227-03:00 [DBG] Loaded hosting startup assembly "Microsoft.AspNetCore.Watch.BrowserRefresh"
+2024-03-02T15:03:39.4151909-03:00 [DBG] Loaded hosting startup assembly "Microsoft.WebTools.BrowserLink.Net"
+2024-03-02T15:03:39.4183620-03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-02T15:03:39.4206407-03:00 [INF] Hosting environment: "Development"
+2024-03-02T15:03:39.4233595-03:00 [INF] Content root path: "C:\Users\fadami.FDM-058\Desktop\PedagioPayPortalUsuarioBack\PedagioPayPortalUsuario\"
+2024-03-02T15:03:39.4264311-03:00 [DBG] Hosting started
+2024-03-02T15:03:39.6619926-03:00 [DBG] Connection id ""0HN1QSCBEVFRL"" accepted.
+2024-03-02T15:03:39.6659753-03:00 [DBG] Connection id ""0HN1QSCBEVFRL"" started.
+2024-03-02T15:03:39.6911740-03:00 [DBG] Connection id ""0HN1QSCBEVFRL"" received FIN.
+2024-03-02T15:03:39.7023395-03:00 [DBG] Connection id ""0HN1QSCBEVFRL"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2024-03-02T15:03:39.7085239-03:00 [DBG] Connection id ""0HN1QSCBEVFRL"" disconnecting.
+2024-03-02T15:03:39.7148303-03:00 [DBG] Connection id ""0HN1QSCBEVFRL"" stopped.
+2024-03-02T15:03:40.1581319-03:00 [DBG] Connection id ""0HN1QSCBEVFRM"" accepted.
+2024-03-02T15:03:40.2681421-03:00 [DBG] Connection id ""0HN1QSCBEVFRN"" accepted.
+2024-03-02T15:03:40.1760341-03:00 [DBG] Connection id ""0HN1QSCBEVFRM"" started.
+2024-03-02T15:03:40.2860133-03:00 [DBG] Connection id ""0HN1QSCBEVFRN"" started.
+2024-03-02T15:03:40.3582119-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/swagger/index.html - -
+2024-03-02T15:03:40.7443625-03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-03-02T15:03:41.1405992-03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-03-02T15:03:41.1793024-03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2024-03-02T15:03:41.1991861-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/_framework/aspnetcore-browser-refresh.js - -
+2024-03-02T15:03:41.2197022-03:00 [DBG] Connection id ""0HN1QSCBEVFRM"" completed keep alive response.
+2024-03-02T15:03:41.2068029-03:00 [DBG] Connection id ""0HN1QSCBEVFRO"" accepted.
+2024-03-02T15:03:41.2279373-03:00 [DBG] Connection id ""0HN1QSCBEVFRN"" completed keep alive response.
+2024-03-02T15:03:41.2279079-03:00 [DBG] Connection id ""0HN1QSCBEVFRO"" started.
+2024-03-02T15:03:41.2293915-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/swagger/index.html - - - 200 - text/html;charset=utf-8 878.0346ms
+2024-03-02T15:03:41.2375775-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/_vs/browserLink - -
+2024-03-02T15:03:41.2360376-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/_framework/aspnetcore-browser-refresh.js - - - 200 13782 application/javascript;+charset=utf-8 36.9058ms
+2024-03-02T15:03:41.4126210-03:00 [DBG] Connection id ""0HN1QSCBEVFRO"" completed keep alive response.
+2024-03-02T15:03:41.4198449-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 182.1492ms
+2024-03-02T15:03:41.5107433-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/swagger/v1/swagger.json - -
+2024-03-02T15:03:41.7903902-03:00 [DBG] Connection id ""0HN1QSCBEVFRO"" completed keep alive response.
+2024-03-02T15:03:41.7999368-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 289.1914ms
+2024-03-02T15:04:10.9338388-03:00 [INF] Request starting HTTP/1.1 POST http://localhost:3001/Usuario/Cadastro application/json-patch+json 156
+2024-03-02T15:04:10.9406216-03:00 [DBG] "POST" requests are not supported
+2024-03-02T15:04:10.9464288-03:00 [DBG] The request has an origin header: '"http://localhost:3001"'.
+2024-03-02T15:04:10.9497827-03:00 [INF] CORS policy execution successful.
+2024-03-02T15:04:10.9567802-03:00 [WRN] Failed to determine the https port for redirect.
+2024-03-02T15:04:11.0132873-03:00 [DBG] 1 candidate(s) found for the request path '"/Usuario/Cadastro"'
+2024-03-02T15:04:11.0248005-03:00 [DBG] Endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"' with route pattern '"Usuario/Cadastro"' is valid for the request path '"/Usuario/Cadastro"'
+2024-03-02T15:04:11.0310294-03:00 [DBG] Request matched endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"'
+2024-03-02T15:04:11.0394797-03:00 [INF] Executing endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"'
+2024-03-02T15:04:11.0936715-03:00 [INF] Route matched with "{action = \"CadastraUsuario\", controller = \"Usuario\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[PedagioPayPortalUsuario.Models.USUARIO]] CadastraUsuario(PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto)" on controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario").
+2024-03-02T15:04:11.1007340-03:00 [DBG] Execution plan of "authorization" filters (in the following order): ["None"]
+2024-03-02T15:04:11.1048696-03:00 [DBG] Execution plan of "resource" filters (in the following order): ["None"]
+2024-03-02T15:04:11.1090824-03:00 [DBG] Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-03-02T15:04:11.1156323-03:00 [DBG] Execution plan of "exception" filters (in the following order): ["None"]
+2024-03-02T15:04:11.1193919-03:00 [DBG] Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-03-02T15:04:11.1239064-03:00 [DBG] Executing controller factory for controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario")
+2024-03-02T15:04:11.5370011-03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-03-02T15:04:12.1290564-03:00 [DBG] Executed controller factory for controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario")
+2024-03-02T15:04:12.1400534-03:00 [DBG] Attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' ...
+2024-03-02T15:04:12.1491120-03:00 [DBG] Attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' using the name '""' in request data ...
+2024-03-02T15:04:12.1547394-03:00 [DBG] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter"' for content type '"application/json-patch+json"'.
+2024-03-02T15:04:12.1594109-03:00 [DBG] Selected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter"' for content type '"application/json-patch+json"'.
+2024-03-02T15:04:12.1801993-03:00 [DBG] Connection id ""0HN1QSCBEVFRO"", Request id ""0HN1QSCBEVFRO:00000004"": started reading request body.
+2024-03-02T15:04:12.2203608-03:00 [DBG] Connection id ""0HN1QSCBEVFRO"", Request id ""0HN1QSCBEVFRO:00000004"": done reading request body.
+2024-03-02T15:04:12.6180052-03:00 [DBG] Done attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T15:04:12.6219423-03:00 [DBG] Done attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T15:04:12.6257103-03:00 [DBG] Attempting to validate the bound parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' ...
+2024-03-02T15:04:12.6458345-03:00 [DBG] Done attempting to validate the bound parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T15:04:14.5251606-03:00 [WRN] The property '"ID_CONCESSAO"' on entity type '"CONCESSAO"' is of type 'byte', but is set up to use a SQL Server identity column; this requires that values starting at 255 and counting down will be used for temporary key values. A temporary key value is needed for every entity inserted in a single call to 'SaveChanges'. Care must be taken that these values do not collide with real key values.
+2024-03-02T15:04:14.9383974-03:00 [DBG] Entity Framework Core "7.0.0" initialized '"PEDAGIOPAYContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"7.0.0"' with options: "None"
+2024-03-02T15:04:15.1356487-03:00 [DBG] Compiling query expression: "
+"'"DbSet<USUARIO>()
+    .FirstOrDefault(x => x.EMAIL == __emailUsuario_0)"'
+2024-03-02T15:04:15.9345362-03:00 [DBG] Generated query execution expression: "
+"'"queryContext => new SingleQueryingEnumerable<USUARIO>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: USUARIO.EMAIL (string) Required PK AfterSave:Throw MaxLength(100) Ansi, 0], [Property: USUARIO.BL_VALIDADO (bool?) ValueGenerated.OnAdd, 1], [Property: USUARIO.CD_STATUS (bool?) ValueGenerated.OnAdd, 2], [Property: USUARIO.CELULAR (string) MaxLength(12) Ansi, 3], [Property: USUARIO.CODIGO_VALIDACAO (string) MaxLength(4) Ansi, 4], [Property: USUARIO.CPF_CNPJ (string) MaxLength(20) Ansi, 5], [Property: USUARIO.DH_TIMESTAMP (DateTime?) ValueGenerated.OnAdd, 6], [Property: USUARIO.ID_APPLE (string) MaxLength(50) Ansi, 7], [Property: USUARIO.ID_FACEBOOK (string) MaxLength(50) Ansi, 8], [Property: USUARIO.ID_GOOGLE (string) MaxLength(50) Ansi, 9], [Property: USUARIO.ID_USUARIO (int) Required ValueGenerated.OnAdd, 10], [Property: USUARIO.NOME (string) MaxLength(50) Ansi, 11], [Property: USUARIO.SENHA (string) MaxLength(100) Ansi, 12], [Property: USUARIO.TOKEN (string) MaxLength(500) Ansi, 13] }
+        SELECT TOP(1) u.EMAIL, u.BL_VALIDADO, u.CD_STATUS, u.CELULAR, u.CODIGO_VALIDACAO, u.CPF_CNPJ, u.DH_TIMESTAMP, u.ID_APPLE, u.ID_FACEBOOK, u.ID_GOOGLE, u.ID_USUARIO, u.NOME, u.SENHA, u.TOKEN
+        FROM USUARIO AS u
+        WHERE u.EMAIL == @__emailUsuario_0), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, USUARIO>, 
+    PedagioPayPortalUsuario.Models.PEDAGIOPAYContext, 
+    False, 
+    False, 
+    True
+)
+    .SingleOrDefault()"'
+2024-03-02T15:04:16.0779563-03:00 [DBG] Creating DbCommand for '"ExecuteReader"'.
+2024-03-02T15:04:16.0939101-03:00 [DBG] Creating DbConnection.
+2024-03-02T15:04:16.2705930-03:00 [DBG] Created DbConnection. (168ms).
+2024-03-02T15:04:16.2981711-03:00 [DBG] Created DbCommand for '"ExecuteReader"' (214ms).
+2024-03-02T15:04:16.3305016-03:00 [DBG] Initialized DbCommand for '"ExecuteReader"' (256ms).
+2024-03-02T15:04:16.3481014-03:00 [DBG] Opening connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:04:18.8911982-03:00 [DBG] Opened connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:04:18.9221207-03:00 [DBG] Executing DbCommand [Parameters=["@__emailUsuario_0='?' (Size = 100) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[EMAIL], [u].[BL_VALIDADO], [u].[CD_STATUS], [u].[CELULAR], [u].[CODIGO_VALIDACAO], [u].[CPF_CNPJ], [u].[DH_TIMESTAMP], [u].[ID_APPLE], [u].[ID_FACEBOOK], [u].[ID_GOOGLE], [u].[ID_USUARIO], [u].[NOME], [u].[SENHA], [u].[TOKEN]
+FROM [USUARIO] AS [u]
+WHERE [u].[EMAIL] = @__emailUsuario_0"
+2024-03-02T15:04:19.3071078-03:00 [INF] Executed DbCommand ("395"ms) [Parameters=["@__emailUsuario_0='?' (Size = 100) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[EMAIL], [u].[BL_VALIDADO], [u].[CD_STATUS], [u].[CELULAR], [u].[CODIGO_VALIDACAO], [u].[CPF_CNPJ], [u].[DH_TIMESTAMP], [u].[ID_APPLE], [u].[ID_FACEBOOK], [u].[ID_GOOGLE], [u].[ID_USUARIO], [u].[NOME], [u].[SENHA], [u].[TOKEN]
+FROM [USUARIO] AS [u]
+WHERE [u].[EMAIL] = @__emailUsuario_0"
+2024-03-02T15:04:19.3321819-03:00 [DBG] Closing data reader to '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:04:19.3592669-03:00 [DBG] A data reader for '"PEDAGIOPAY"' on server '"192.168.140.157"' is being disposed after spending 30ms reading results.
+2024-03-02T15:04:19.3757371-03:00 [DBG] Closing connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:04:19.3998770-03:00 [DBG] Closed connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"' (24ms).
+2024-03-02T15:04:20.7064238-03:00 [INF] Iniciar envio de email
+2024-03-02T15:04:20.7091974-03:00 [INF] Email usuario : pedagiopay.email.fadami@gmail.com
+2024-03-02T15:04:20.7349282-03:00 [INF] Objeto email: {"Remetente":"pegadiopay.email.fadami@gmail.com","AliasRemetente":"PedagioPay","Assunto":"Confima\u00E7\u00E3o de email | Pedagio Pay","Texto":null,"CorpoHTML":false,"Destinatarios":[],"Cc":[],"Cco":[],"Anexos":[],"Imagens":[],"SMTP":{"Servidor":"smtp.gmail.com","Porta":587,"Login":"pegadiopay.email.fadami@gmail.com","Senha":"gmpb vhax fntv tscq","RequerAutenticacao":false,"UtilizaSSL":false}}
+2024-03-02T15:04:22.1548711-03:00 [INF] Executed action "PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)" in 11022.9543ms
+2024-03-02T15:04:22.1625946-03:00 [INF] Executed endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"'
+2024-03-02T15:04:22.1675212-03:00 [ERR] An unhandled exception has occurred while executing the request.
+2024-03-02T15:04:22.3581624-03:00 [DBG] Connection id ""0HN1QSCBEVFRO"" completed keep alive response.
+2024-03-02T15:04:22.3697449-03:00 [DBG] '"PEDAGIOPAYContext"' disposed.
+2024-03-02T15:04:22.4347968-03:00 [DBG] Disposing connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:04:22.4448363-03:00 [DBG] Disposed connection to database '""' on server '""' (8ms).
+2024-03-02T15:04:22.4508580-03:00 [INF] Request finished HTTP/1.1 POST http://localhost:3001/Usuario/Cadastro application/json-patch+json 156 - 500 - text/plain;+charset=utf-8 11517.0008ms
+2024-03-02T15:08:43.2196885-03:00 [DBG] Connection id ""0HN1QSCBEVFRM"" received FIN.
+2024-03-02T15:08:43.2222487-03:00 [DBG] Connection id ""0HN1QSCBEVFRN"" received FIN.
+2024-03-02T15:08:43.2300097-03:00 [DBG] Connection id ""0HN1QSCBEVFRM"" disconnecting.
+2024-03-02T15:08:43.2326630-03:00 [DBG] Connection id ""0HN1QSCBEVFRN"" disconnecting.
+2024-03-02T15:08:43.2355926-03:00 [DBG] Connection id ""0HN1QSCBEVFRM"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2024-03-02T15:08:43.2381143-03:00 [DBG] Connection id ""0HN1QSCBEVFRN"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2024-03-02T15:08:43.2477642-03:00 [DBG] Connection id ""0HN1QSCBEVFRN"" stopped.
+2024-03-02T15:08:43.2477641-03:00 [DBG] Connection id ""0HN1QSCBEVFRM"" stopped.
+2024-03-02T15:11:45.1230672-03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-03-02T15:11:45.2067290-03:00 [DBG] Hosting starting
+2024-03-02T15:11:45.2563820-03:00 [INF] User profile is available. Using '"C:\Users\fadami.FDM-058\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-02T15:11:45.2635613-03:00 [DBG] Reading data from file '"C:\Users\fadami.FDM-058\AppData\Local\ASP.NET\DataProtection-Keys\key-ae5c53c0-d26a-4a4a-a697-3522b7f9cd35.xml"'.
+2024-03-02T15:11:45.2825481-03:00 [DBG] Found key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35}.
+2024-03-02T15:11:45.3039914-03:00 [DBG] Considering key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} with expiration date 2024-03-19 16:36:08Z as default key.
+2024-03-02T15:11:45.3188797-03:00 [DBG] Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+2024-03-02T15:11:45.3320397-03:00 [DBG] Decrypting secret element using Windows DPAPI.
+2024-03-02T15:11:45.3363812-03:00 [DBG] Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+2024-03-02T15:11:45.3513911-03:00 [DBG] Opening CNG algorithm '"AES"' from provider 'null' with chaining mode CBC.
+2024-03-02T15:11:45.3581823-03:00 [DBG] Opening CNG algorithm '"SHA256"' from provider 'null' with HMAC.
+2024-03-02T15:11:45.3656511-03:00 [DBG] Using key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} as the default key.
+2024-03-02T15:11:45.3693324-03:00 [DBG] Key ring with default key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} was loaded during application startup.
+2024-03-02T15:11:45.5152369-03:00 [INF] Now listening on: "http://localhost:3001"
+2024-03-02T15:11:45.5176637-03:00 [DBG] Loaded hosting startup assembly "PedagioPayPortalUsuario"
+2024-03-02T15:11:45.5200024-03:00 [DBG] Loaded hosting startup assembly "Microsoft.AspNetCore.Watch.BrowserRefresh"
+2024-03-02T15:11:45.5225692-03:00 [DBG] Loaded hosting startup assembly "Microsoft.WebTools.BrowserLink.Net"
+2024-03-02T15:11:45.5267903-03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-02T15:11:45.5292988-03:00 [INF] Hosting environment: "Development"
+2024-03-02T15:11:45.5319445-03:00 [INF] Content root path: "C:\Users\fadami.FDM-058\Desktop\PedagioPayPortalUsuarioBack\PedagioPayPortalUsuario\"
+2024-03-02T15:11:45.5345200-03:00 [DBG] Hosting started
+2024-03-02T15:11:45.8785170-03:00 [DBG] Connection id ""0HN1QSGSBUHQV"" received FIN.
+2024-03-02T15:11:45.8945492-03:00 [DBG] Connection id ""0HN1QSGSBUHQV"" accepted.
+2024-03-02T15:11:45.8998171-03:00 [DBG] Connection id ""0HN1QSGSBUHQV"" started.
+2024-03-02T15:11:45.9066627-03:00 [DBG] Connection id ""0HN1QSGSBUHQV"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2024-03-02T15:11:45.9134314-03:00 [DBG] Connection id ""0HN1QSGSBUHQV"" disconnecting.
+2024-03-02T15:11:45.9347783-03:00 [DBG] Connection id ""0HN1QSGSBUHQV"" stopped.
+2024-03-02T15:11:47.2258996-03:00 [DBG] Connection id ""0HN1QSGSBUHR0"" accepted.
+2024-03-02T15:11:47.2406919-03:00 [DBG] Connection id ""0HN1QSGSBUHR0"" started.
+2024-03-02T15:11:47.3031721-03:00 [DBG] Connection id ""0HN1QSGSBUHR1"" accepted.
+2024-03-02T15:11:47.3374087-03:00 [DBG] Connection id ""0HN1QSGSBUHR1"" started.
+2024-03-02T15:11:47.3981640-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/swagger/index.html - -
+2024-03-02T15:11:47.6467552-03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-03-02T15:11:47.9549384-03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-03-02T15:11:47.9953362-03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2024-03-02T15:11:48.0174357-03:00 [DBG] Connection id ""0HN1QSGSBUHR2"" accepted.
+2024-03-02T15:11:48.0358414-03:00 [DBG] Connection id ""0HN1QSGSBUHR0"" completed keep alive response.
+2024-03-02T15:11:48.0352679-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/_framework/aspnetcore-browser-refresh.js - -
+2024-03-02T15:11:48.0383874-03:00 [DBG] Connection id ""0HN1QSGSBUHR2"" started.
+2024-03-02T15:11:48.0462194-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/swagger/index.html - - - 200 - text/html;charset=utf-8 656.6875ms
+2024-03-02T15:11:48.0477439-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/_vs/browserLink - -
+2024-03-02T15:11:48.0511651-03:00 [DBG] Connection id ""0HN1QSGSBUHR1"" completed keep alive response.
+2024-03-02T15:11:48.0550330-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/_framework/aspnetcore-browser-refresh.js - - - 200 13782 application/javascript;+charset=utf-8 19.6352ms
+2024-03-02T15:11:48.1738176-03:00 [DBG] Connection id ""0HN1QSGSBUHR2"" completed keep alive response.
+2024-03-02T15:11:48.2231550-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 175.3759ms
+2024-03-02T15:11:48.2604667-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/swagger/v1/swagger.json - -
+2024-03-02T15:11:48.5027319-03:00 [DBG] Connection id ""0HN1QSGSBUHR2"" completed keep alive response.
+2024-03-02T15:11:48.5101032-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 249.6096ms
+2024-03-02T15:12:36.5122106-03:00 [INF] Request starting HTTP/1.1 POST http://localhost:3001/Usuario/Cadastro application/json-patch+json 156
+2024-03-02T15:12:36.5183704-03:00 [DBG] "POST" requests are not supported
+2024-03-02T15:12:36.5244252-03:00 [DBG] The request has an origin header: '"http://localhost:3001"'.
+2024-03-02T15:12:36.5274326-03:00 [INF] CORS policy execution successful.
+2024-03-02T15:12:36.5329239-03:00 [WRN] Failed to determine the https port for redirect.
+2024-03-02T15:12:36.5731327-03:00 [DBG] 1 candidate(s) found for the request path '"/Usuario/Cadastro"'
+2024-03-02T15:12:36.5844081-03:00 [DBG] Endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"' with route pattern '"Usuario/Cadastro"' is valid for the request path '"/Usuario/Cadastro"'
+2024-03-02T15:12:36.5896653-03:00 [DBG] Request matched endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"'
+2024-03-02T15:12:36.5960974-03:00 [INF] Executing endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"'
+2024-03-02T15:12:36.6422910-03:00 [INF] Route matched with "{action = \"CadastraUsuario\", controller = \"Usuario\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[PedagioPayPortalUsuario.Models.USUARIO]] CadastraUsuario(PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto)" on controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario").
+2024-03-02T15:12:36.6483847-03:00 [DBG] Execution plan of "authorization" filters (in the following order): ["None"]
+2024-03-02T15:12:36.6523227-03:00 [DBG] Execution plan of "resource" filters (in the following order): ["None"]
+2024-03-02T15:12:36.6569846-03:00 [DBG] Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-03-02T15:12:36.6651315-03:00 [DBG] Execution plan of "exception" filters (in the following order): ["None"]
+2024-03-02T15:12:36.6714535-03:00 [DBG] Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-03-02T15:12:36.6767960-03:00 [DBG] Executing controller factory for controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario")
+2024-03-02T15:12:36.8834009-03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-03-02T15:12:37.1314671-03:00 [DBG] Executed controller factory for controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario")
+2024-03-02T15:12:37.1425984-03:00 [DBG] Attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' ...
+2024-03-02T15:12:37.1487654-03:00 [DBG] Attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' using the name '""' in request data ...
+2024-03-02T15:12:37.1546836-03:00 [DBG] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter"' for content type '"application/json-patch+json"'.
+2024-03-02T15:12:37.1583548-03:00 [DBG] Selected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter"' for content type '"application/json-patch+json"'.
+2024-03-02T15:12:37.1735623-03:00 [DBG] Connection id ""0HN1QSGSBUHR2"", Request id ""0HN1QSGSBUHR2:00000004"": started reading request body.
+2024-03-02T15:12:37.1774365-03:00 [DBG] Connection id ""0HN1QSGSBUHR2"", Request id ""0HN1QSGSBUHR2:00000004"": done reading request body.
+2024-03-02T15:12:37.3730864-03:00 [DBG] Done attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T15:12:37.3773310-03:00 [DBG] Done attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T15:12:37.3814724-03:00 [DBG] Attempting to validate the bound parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' ...
+2024-03-02T15:12:37.4051752-03:00 [DBG] Done attempting to validate the bound parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T15:12:38.6082830-03:00 [WRN] The property '"ID_CONCESSAO"' on entity type '"CONCESSAO"' is of type 'byte', but is set up to use a SQL Server identity column; this requires that values starting at 255 and counting down will be used for temporary key values. A temporary key value is needed for every entity inserted in a single call to 'SaveChanges'. Care must be taken that these values do not collide with real key values.
+2024-03-02T15:12:38.9379851-03:00 [DBG] Entity Framework Core "7.0.0" initialized '"PEDAGIOPAYContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"7.0.0"' with options: "None"
+2024-03-02T15:12:39.0714950-03:00 [DBG] Compiling query expression: "
+"'"DbSet<USUARIO>()
+    .FirstOrDefault(x => x.EMAIL == __emailUsuario_0)"'
+2024-03-02T15:12:39.6933795-03:00 [DBG] Generated query execution expression: "
+"'"queryContext => new SingleQueryingEnumerable<USUARIO>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: USUARIO.EMAIL (string) Required PK AfterSave:Throw MaxLength(100) Ansi, 0], [Property: USUARIO.BL_VALIDADO (bool?) ValueGenerated.OnAdd, 1], [Property: USUARIO.CD_STATUS (bool?) ValueGenerated.OnAdd, 2], [Property: USUARIO.CELULAR (string) MaxLength(12) Ansi, 3], [Property: USUARIO.CODIGO_VALIDACAO (string) MaxLength(4) Ansi, 4], [Property: USUARIO.CPF_CNPJ (string) MaxLength(20) Ansi, 5], [Property: USUARIO.DH_TIMESTAMP (DateTime?) ValueGenerated.OnAdd, 6], [Property: USUARIO.ID_APPLE (string) MaxLength(50) Ansi, 7], [Property: USUARIO.ID_FACEBOOK (string) MaxLength(50) Ansi, 8], [Property: USUARIO.ID_GOOGLE (string) MaxLength(50) Ansi, 9], [Property: USUARIO.ID_USUARIO (int) Required ValueGenerated.OnAdd, 10], [Property: USUARIO.NOME (string) MaxLength(50) Ansi, 11], [Property: USUARIO.SENHA (string) MaxLength(100) Ansi, 12], [Property: USUARIO.TOKEN (string) MaxLength(500) Ansi, 13] }
+        SELECT TOP(1) u.EMAIL, u.BL_VALIDADO, u.CD_STATUS, u.CELULAR, u.CODIGO_VALIDACAO, u.CPF_CNPJ, u.DH_TIMESTAMP, u.ID_APPLE, u.ID_FACEBOOK, u.ID_GOOGLE, u.ID_USUARIO, u.NOME, u.SENHA, u.TOKEN
+        FROM USUARIO AS u
+        WHERE u.EMAIL == @__emailUsuario_0), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, USUARIO>, 
+    PedagioPayPortalUsuario.Models.PEDAGIOPAYContext, 
+    False, 
+    False, 
+    True
+)
+    .SingleOrDefault()"'
+2024-03-02T15:12:39.7969076-03:00 [DBG] Creating DbCommand for '"ExecuteReader"'.
+2024-03-02T15:12:39.8051203-03:00 [DBG] Creating DbConnection.
+2024-03-02T15:12:39.8738376-03:00 [DBG] Created DbConnection. (62ms).
+2024-03-02T15:12:39.8910956-03:00 [DBG] Created DbCommand for '"ExecuteReader"' (91ms).
+2024-03-02T15:12:39.9205444-03:00 [DBG] Initialized DbCommand for '"ExecuteReader"' (124ms).
+2024-03-02T15:12:39.9318762-03:00 [DBG] Opening connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:12:41.7601076-03:00 [DBG] Opened connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:12:41.7929032-03:00 [DBG] Executing DbCommand [Parameters=["@__emailUsuario_0='?' (Size = 100) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[EMAIL], [u].[BL_VALIDADO], [u].[CD_STATUS], [u].[CELULAR], [u].[CODIGO_VALIDACAO], [u].[CPF_CNPJ], [u].[DH_TIMESTAMP], [u].[ID_APPLE], [u].[ID_FACEBOOK], [u].[ID_GOOGLE], [u].[ID_USUARIO], [u].[NOME], [u].[SENHA], [u].[TOKEN]
+FROM [USUARIO] AS [u]
+WHERE [u].[EMAIL] = @__emailUsuario_0"
+2024-03-02T15:12:42.1619975-03:00 [INF] Executed DbCommand ("383"ms) [Parameters=["@__emailUsuario_0='?' (Size = 100) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[EMAIL], [u].[BL_VALIDADO], [u].[CD_STATUS], [u].[CELULAR], [u].[CODIGO_VALIDACAO], [u].[CPF_CNPJ], [u].[DH_TIMESTAMP], [u].[ID_APPLE], [u].[ID_FACEBOOK], [u].[ID_GOOGLE], [u].[ID_USUARIO], [u].[NOME], [u].[SENHA], [u].[TOKEN]
+FROM [USUARIO] AS [u]
+WHERE [u].[EMAIL] = @__emailUsuario_0"
+2024-03-02T15:12:42.1779587-03:00 [DBG] Closing data reader to '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:12:42.1966774-03:00 [DBG] A data reader for '"PEDAGIOPAY"' on server '"192.168.140.157"' is being disposed after spending 20ms reading results.
+2024-03-02T15:12:42.2068944-03:00 [DBG] Closing connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:12:42.2249069-03:00 [DBG] Closed connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"' (18ms).
+2024-03-02T15:12:43.5283545-03:00 [INF] Iniciar envio de email
+2024-03-02T15:12:43.5307979-03:00 [INF] Email usuario : pedagiopay.email.fadami@gmail.com
+2024-03-02T15:12:43.5503098-03:00 [INF] Objeto email: {"Remetente":"pegadiopay.email.fadami@gmail.com","AliasRemetente":"PedagioPay","Assunto":"Confima\u00E7\u00E3o de email | Pedagio Pay","Texto":null,"CorpoHTML":false,"Destinatarios":[],"Cc":[],"Cco":[],"Anexos":[],"Imagens":[],"SMTP":{"Servidor":"smtp.gmail.com","Porta":587,"Login":"pegadiopay.email.fadami@gmail.com","Senha":"gmpb vhax fntv tscq","RequerAutenticacao":false,"UtilizaSSL":false}}
+2024-03-02T15:12:44.6884907-03:00 [INF] Executed action "PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)" in 8004.0412ms
+2024-03-02T15:12:44.6933539-03:00 [INF] Executed endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"'
+2024-03-02T15:12:44.6976116-03:00 [ERR] An unhandled exception has occurred while executing the request.
+2024-03-02T15:12:44.7605059-03:00 [DBG] Connection id ""0HN1QSGSBUHR2"" completed keep alive response.
+2024-03-02T15:12:44.7729905-03:00 [DBG] '"PEDAGIOPAYContext"' disposed.
+2024-03-02T15:12:44.7921308-03:00 [DBG] Disposing connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:12:44.8074447-03:00 [DBG] Disposed connection to database '""' on server '""' (7ms).
+2024-03-02T15:12:44.8155178-03:00 [INF] Request finished HTTP/1.1 POST http://localhost:3001/Usuario/Cadastro application/json-patch+json 156 - 500 - text/plain;+charset=utf-8 8303.2960ms
+2024-03-02T15:17:48.3650570-03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-03-02T15:17:48.4841265-03:00 [DBG] Hosting starting
+2024-03-02T15:17:48.5534636-03:00 [INF] User profile is available. Using '"C:\Users\fadami.FDM-058\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-02T15:17:48.5608079-03:00 [DBG] Reading data from file '"C:\Users\fadami.FDM-058\AppData\Local\ASP.NET\DataProtection-Keys\key-ae5c53c0-d26a-4a4a-a697-3522b7f9cd35.xml"'.
+2024-03-02T15:17:48.5829904-03:00 [DBG] Found key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35}.
+2024-03-02T15:17:48.6078237-03:00 [DBG] Considering key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} with expiration date 2024-03-19 16:36:08Z as default key.
+2024-03-02T15:17:48.6200392-03:00 [DBG] Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+2024-03-02T15:17:48.6312409-03:00 [DBG] Decrypting secret element using Windows DPAPI.
+2024-03-02T15:17:48.6383686-03:00 [DBG] Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+2024-03-02T15:17:48.6525449-03:00 [DBG] Opening CNG algorithm '"AES"' from provider 'null' with chaining mode CBC.
+2024-03-02T15:17:48.6599144-03:00 [DBG] Opening CNG algorithm '"SHA256"' from provider 'null' with HMAC.
+2024-03-02T15:17:48.6668903-03:00 [DBG] Using key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} as the default key.
+2024-03-02T15:17:48.6719378-03:00 [DBG] Key ring with default key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} was loaded during application startup.
+2024-03-02T15:17:48.8721479-03:00 [INF] Now listening on: "http://localhost:3001"
+2024-03-02T15:17:48.8792525-03:00 [DBG] Loaded hosting startup assembly "PedagioPayPortalUsuario"
+2024-03-02T15:17:48.8819352-03:00 [DBG] Loaded hosting startup assembly "Microsoft.AspNetCore.Watch.BrowserRefresh"
+2024-03-02T15:17:48.8865129-03:00 [DBG] Loaded hosting startup assembly "Microsoft.WebTools.BrowserLink.Net"
+2024-03-02T15:17:48.8903410-03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-02T15:17:48.8926963-03:00 [INF] Hosting environment: "Development"
+2024-03-02T15:17:48.8951835-03:00 [INF] Content root path: "C:\Users\fadami.FDM-058\Desktop\PedagioPayPortalUsuarioBack\PedagioPayPortalUsuario\"
+2024-03-02T15:17:48.8977816-03:00 [DBG] Hosting started
+2024-03-02T15:17:49.4922738-03:00 [DBG] Connection id ""0HN1QSK8NKLBB"" received FIN.
+2024-03-02T15:17:49.4922739-03:00 [DBG] Connection id ""0HN1QSK8NKLBC"" received FIN.
+2024-03-02T15:17:49.5110869-03:00 [DBG] Connection id ""0HN1QSK8NKLBB"" accepted.
+2024-03-02T15:17:49.5112115-03:00 [DBG] Connection id ""0HN1QSK8NKLBC"" accepted.
+2024-03-02T15:17:49.5235813-03:00 [DBG] Connection id ""0HN1QSK8NKLBC"" started.
+2024-03-02T15:17:49.5236373-03:00 [DBG] Connection id ""0HN1QSK8NKLBB"" started.
+2024-03-02T15:17:49.5351154-03:00 [DBG] Connection id ""0HN1QSK8NKLBB"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2024-03-02T15:17:49.5351154-03:00 [DBG] Connection id ""0HN1QSK8NKLBC"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2024-03-02T15:17:49.5426470-03:00 [DBG] Connection id ""0HN1QSK8NKLBB"" disconnecting.
+2024-03-02T15:17:49.5447308-03:00 [DBG] Connection id ""0HN1QSK8NKLBC"" disconnecting.
+2024-03-02T15:17:49.5556390-03:00 [DBG] Connection id ""0HN1QSK8NKLBB"" stopped.
+2024-03-02T15:17:49.5556387-03:00 [DBG] Connection id ""0HN1QSK8NKLBC"" stopped.
+2024-03-02T15:17:50.2776325-03:00 [DBG] Connection id ""0HN1QSK8NKLBD"" accepted.
+2024-03-02T15:17:50.2910162-03:00 [DBG] Connection id ""0HN1QSK8NKLBD"" started.
+2024-03-02T15:17:50.3491512-03:00 [DBG] Connection id ""0HN1QSK8NKLBE"" accepted.
+2024-03-02T15:17:50.3948463-03:00 [DBG] Connection id ""0HN1QSK8NKLBE"" started.
+2024-03-02T15:17:50.4798920-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/swagger/index.html - -
+2024-03-02T15:17:50.7141796-03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-03-02T15:17:51.1273739-03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-03-02T15:17:51.1691096-03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2024-03-02T15:17:51.1997447-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/_framework/aspnetcore-browser-refresh.js - -
+2024-03-02T15:17:51.1923990-03:00 [DBG] Connection id ""0HN1QSK8NKLBF"" accepted.
+2024-03-02T15:17:51.2037545-03:00 [DBG] Connection id ""0HN1QSK8NKLBD"" completed keep alive response.
+2024-03-02T15:17:51.2130106-03:00 [DBG] Connection id ""0HN1QSK8NKLBE"" completed keep alive response.
+2024-03-02T15:17:51.2125566-03:00 [DBG] Connection id ""0HN1QSK8NKLBF"" started.
+2024-03-02T15:17:51.2275911-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/_framework/aspnetcore-browser-refresh.js - - - 200 13782 application/javascript;+charset=utf-8 27.4118ms
+2024-03-02T15:17:51.2275944-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/swagger/index.html - - - 200 - text/html;charset=utf-8 758.0396ms
+2024-03-02T15:17:51.2298096-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/_vs/browserLink - -
+2024-03-02T15:17:51.3583590-03:00 [DBG] Connection id ""0HN1QSK8NKLBF"" completed keep alive response.
+2024-03-02T15:17:51.3625204-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 132.6534ms
+2024-03-02T15:17:51.4464505-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/swagger/v1/swagger.json - -
+2024-03-02T15:17:51.7150124-03:00 [DBG] Connection id ""0HN1QSK8NKLBF"" completed keep alive response.
+2024-03-02T15:17:51.7278453-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 281.3840ms
+2024-03-02T15:18:26.1774209-03:00 [INF] Request starting HTTP/1.1 POST http://localhost:3001/Usuario/Cadastro application/json-patch+json 151
+2024-03-02T15:18:26.1853941-03:00 [DBG] "POST" requests are not supported
+2024-03-02T15:18:26.1885147-03:00 [DBG] The request has an origin header: '"http://localhost:3001"'.
+2024-03-02T15:18:26.1914502-03:00 [INF] CORS policy execution successful.
+2024-03-02T15:18:26.1961688-03:00 [WRN] Failed to determine the https port for redirect.
+2024-03-02T15:18:26.2423730-03:00 [DBG] 1 candidate(s) found for the request path '"/Usuario/Cadastro"'
+2024-03-02T15:18:26.2542768-03:00 [DBG] Endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"' with route pattern '"Usuario/Cadastro"' is valid for the request path '"/Usuario/Cadastro"'
+2024-03-02T15:18:26.2587898-03:00 [DBG] Request matched endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"'
+2024-03-02T15:18:26.2652399-03:00 [INF] Executing endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"'
+2024-03-02T15:18:26.3032390-03:00 [INF] Route matched with "{action = \"CadastraUsuario\", controller = \"Usuario\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[PedagioPayPortalUsuario.Models.USUARIO]] CadastraUsuario(PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto)" on controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario").
+2024-03-02T15:18:26.3093958-03:00 [DBG] Execution plan of "authorization" filters (in the following order): ["None"]
+2024-03-02T15:18:26.3131256-03:00 [DBG] Execution plan of "resource" filters (in the following order): ["None"]
+2024-03-02T15:18:26.3185026-03:00 [DBG] Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-03-02T15:18:26.3238480-03:00 [DBG] Execution plan of "exception" filters (in the following order): ["None"]
+2024-03-02T15:18:26.3277381-03:00 [DBG] Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-03-02T15:18:26.3327576-03:00 [DBG] Executing controller factory for controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario")
+2024-03-02T15:18:26.5221015-03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-03-02T15:18:26.7583890-03:00 [DBG] Executed controller factory for controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario")
+2024-03-02T15:18:26.7670455-03:00 [DBG] Attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' ...
+2024-03-02T15:18:26.7734052-03:00 [DBG] Attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' using the name '""' in request data ...
+2024-03-02T15:18:26.7784743-03:00 [DBG] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter"' for content type '"application/json-patch+json"'.
+2024-03-02T15:18:26.7841417-03:00 [DBG] Selected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter"' for content type '"application/json-patch+json"'.
+2024-03-02T15:18:26.8016370-03:00 [DBG] Connection id ""0HN1QSK8NKLBF"", Request id ""0HN1QSK8NKLBF:00000004"": started reading request body.
+2024-03-02T15:18:26.8054683-03:00 [DBG] Connection id ""0HN1QSK8NKLBF"", Request id ""0HN1QSK8NKLBF:00000004"": done reading request body.
+2024-03-02T15:18:27.0201111-03:00 [DBG] Done attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T15:18:27.0241511-03:00 [DBG] Done attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T15:18:27.0280933-03:00 [DBG] Attempting to validate the bound parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' ...
+2024-03-02T15:18:27.0518240-03:00 [DBG] Done attempting to validate the bound parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T15:18:28.2882874-03:00 [WRN] The property '"ID_CONCESSAO"' on entity type '"CONCESSAO"' is of type 'byte', but is set up to use a SQL Server identity column; this requires that values starting at 255 and counting down will be used for temporary key values. A temporary key value is needed for every entity inserted in a single call to 'SaveChanges'. Care must be taken that these values do not collide with real key values.
+2024-03-02T15:18:28.6486087-03:00 [DBG] Entity Framework Core "7.0.0" initialized '"PEDAGIOPAYContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"7.0.0"' with options: "None"
+2024-03-02T15:18:28.7565214-03:00 [DBG] Compiling query expression: "
+"'"DbSet<USUARIO>()
+    .FirstOrDefault(x => x.EMAIL == __emailUsuario_0)"'
+2024-03-02T15:18:29.3599941-03:00 [DBG] Generated query execution expression: "
+"'"queryContext => new SingleQueryingEnumerable<USUARIO>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: USUARIO.EMAIL (string) Required PK AfterSave:Throw MaxLength(100) Ansi, 0], [Property: USUARIO.BL_VALIDADO (bool?) ValueGenerated.OnAdd, 1], [Property: USUARIO.CD_STATUS (bool?) ValueGenerated.OnAdd, 2], [Property: USUARIO.CELULAR (string) MaxLength(12) Ansi, 3], [Property: USUARIO.CODIGO_VALIDACAO (string) MaxLength(4) Ansi, 4], [Property: USUARIO.CPF_CNPJ (string) MaxLength(20) Ansi, 5], [Property: USUARIO.DH_TIMESTAMP (DateTime?) ValueGenerated.OnAdd, 6], [Property: USUARIO.ID_APPLE (string) MaxLength(50) Ansi, 7], [Property: USUARIO.ID_FACEBOOK (string) MaxLength(50) Ansi, 8], [Property: USUARIO.ID_GOOGLE (string) MaxLength(50) Ansi, 9], [Property: USUARIO.ID_USUARIO (int) Required ValueGenerated.OnAdd, 10], [Property: USUARIO.NOME (string) MaxLength(50) Ansi, 11], [Property: USUARIO.SENHA (string) MaxLength(100) Ansi, 12], [Property: USUARIO.TOKEN (string) MaxLength(500) Ansi, 13] }
+        SELECT TOP(1) u.EMAIL, u.BL_VALIDADO, u.CD_STATUS, u.CELULAR, u.CODIGO_VALIDACAO, u.CPF_CNPJ, u.DH_TIMESTAMP, u.ID_APPLE, u.ID_FACEBOOK, u.ID_GOOGLE, u.ID_USUARIO, u.NOME, u.SENHA, u.TOKEN
+        FROM USUARIO AS u
+        WHERE u.EMAIL == @__emailUsuario_0), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, USUARIO>, 
+    PedagioPayPortalUsuario.Models.PEDAGIOPAYContext, 
+    False, 
+    False, 
+    True
+)
+    .SingleOrDefault()"'
+2024-03-02T15:18:29.4646879-03:00 [DBG] Creating DbCommand for '"ExecuteReader"'.
+2024-03-02T15:18:29.4738149-03:00 [DBG] Creating DbConnection.
+2024-03-02T15:18:29.5407483-03:00 [DBG] Created DbConnection. (64ms).
+2024-03-02T15:18:29.5585145-03:00 [DBG] Created DbCommand for '"ExecuteReader"' (90ms).
+2024-03-02T15:18:29.5831087-03:00 [DBG] Initialized DbCommand for '"ExecuteReader"' (120ms).
+2024-03-02T15:18:29.5913185-03:00 [DBG] Opening connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:18:31.1864971-03:00 [DBG] Opened connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:18:31.2169640-03:00 [DBG] Executing DbCommand [Parameters=["@__emailUsuario_0='?' (Size = 100) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[EMAIL], [u].[BL_VALIDADO], [u].[CD_STATUS], [u].[CELULAR], [u].[CODIGO_VALIDACAO], [u].[CPF_CNPJ], [u].[DH_TIMESTAMP], [u].[ID_APPLE], [u].[ID_FACEBOOK], [u].[ID_GOOGLE], [u].[ID_USUARIO], [u].[NOME], [u].[SENHA], [u].[TOKEN]
+FROM [USUARIO] AS [u]
+WHERE [u].[EMAIL] = @__emailUsuario_0"
+2024-03-02T15:18:31.5597632-03:00 [INF] Executed DbCommand ("361"ms) [Parameters=["@__emailUsuario_0='?' (Size = 100) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[EMAIL], [u].[BL_VALIDADO], [u].[CD_STATUS], [u].[CELULAR], [u].[CODIGO_VALIDACAO], [u].[CPF_CNPJ], [u].[DH_TIMESTAMP], [u].[ID_APPLE], [u].[ID_FACEBOOK], [u].[ID_GOOGLE], [u].[ID_USUARIO], [u].[NOME], [u].[SENHA], [u].[TOKEN]
+FROM [USUARIO] AS [u]
+WHERE [u].[EMAIL] = @__emailUsuario_0"
+2024-03-02T15:18:31.5820836-03:00 [DBG] Closing data reader to '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:18:31.6054181-03:00 [DBG] A data reader for '"PEDAGIOPAY"' on server '"192.168.140.157"' is being disposed after spending 25ms reading results.
+2024-03-02T15:18:31.6167705-03:00 [DBG] Closing connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:18:31.6375805-03:00 [DBG] Closed connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"' (22ms).
+2024-03-02T15:18:32.7577438-03:00 [INF] Iniciar envio de email
+2024-03-02T15:18:32.7602413-03:00 [INF] Email usuario : barton.hansen@ethereal.email
+2024-03-02T15:18:32.7859951-03:00 [INF] Objeto email: {"Remetente":"barton.hansen@ethereal.email","AliasRemetente":"PedagioPay","Assunto":"Confima\u00E7\u00E3o de email | Pedagio Pay","Texto":null,"CorpoHTML":false,"Destinatarios":[],"Cc":[],"Cco":[],"Anexos":[],"Imagens":[],"SMTP":{"Servidor":"smtp.gmail.com","Porta":587,"Login":"barton.hansen@ethereal.email","Senha":"barton.hansen@ethereal.email","RequerAutenticacao":false,"UtilizaSSL":false}}
+2024-03-02T15:18:33.7416443-03:00 [INF] Executed action "PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)" in 7402.1452ms
+2024-03-02T15:18:33.7485007-03:00 [INF] Executed endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"'
+2024-03-02T15:18:33.7537733-03:00 [ERR] An unhandled exception has occurred while executing the request.
+2024-03-02T15:18:33.8392230-03:00 [DBG] Connection id ""0HN1QSK8NKLBF"" completed keep alive response.
+2024-03-02T15:18:33.8527528-03:00 [DBG] '"PEDAGIOPAYContext"' disposed.
+2024-03-02T15:18:33.8768029-03:00 [DBG] Disposing connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:18:33.8904643-03:00 [DBG] Disposed connection to database '""' on server '""' (13ms).
+2024-03-02T15:18:33.9000451-03:00 [INF] Request finished HTTP/1.1 POST http://localhost:3001/Usuario/Cadastro application/json-patch+json 151 - 500 - text/plain;+charset=utf-8 7722.5872ms
+2024-03-02T15:21:00.0340967-03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-03-02T15:21:00.1394041-03:00 [DBG] Hosting starting
+2024-03-02T15:21:00.2047433-03:00 [INF] User profile is available. Using '"C:\Users\fadami.FDM-058\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-02T15:21:00.2121512-03:00 [DBG] Reading data from file '"C:\Users\fadami.FDM-058\AppData\Local\ASP.NET\DataProtection-Keys\key-ae5c53c0-d26a-4a4a-a697-3522b7f9cd35.xml"'.
+2024-03-02T15:21:00.2299781-03:00 [DBG] Found key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35}.
+2024-03-02T15:21:00.2503722-03:00 [DBG] Considering key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} with expiration date 2024-03-19 16:36:08Z as default key.
+2024-03-02T15:21:00.2570952-03:00 [DBG] Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+2024-03-02T15:21:00.2664342-03:00 [DBG] Decrypting secret element using Windows DPAPI.
+2024-03-02T15:21:00.2700982-03:00 [DBG] Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+2024-03-02T15:21:00.2816063-03:00 [DBG] Opening CNG algorithm '"AES"' from provider 'null' with chaining mode CBC.
+2024-03-02T15:21:00.2881966-03:00 [DBG] Opening CNG algorithm '"SHA256"' from provider 'null' with HMAC.
+2024-03-02T15:21:00.2945768-03:00 [DBG] Using key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} as the default key.
+2024-03-02T15:21:00.2980426-03:00 [DBG] Key ring with default key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} was loaded during application startup.
+2024-03-02T15:21:00.4373448-03:00 [INF] Now listening on: "http://localhost:3001"
+2024-03-02T15:21:00.4398065-03:00 [DBG] Loaded hosting startup assembly "PedagioPayPortalUsuario"
+2024-03-02T15:21:00.4421483-03:00 [DBG] Loaded hosting startup assembly "Microsoft.AspNetCore.Watch.BrowserRefresh"
+2024-03-02T15:21:00.4448263-03:00 [DBG] Loaded hosting startup assembly "Microsoft.WebTools.BrowserLink.Net"
+2024-03-02T15:21:00.4481852-03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-02T15:21:00.4502445-03:00 [INF] Hosting environment: "Development"
+2024-03-02T15:21:00.4525879-03:00 [INF] Content root path: "C:\Users\fadami.FDM-058\Desktop\PedagioPayPortalUsuarioBack\PedagioPayPortalUsuario\"
+2024-03-02T15:21:00.4551924-03:00 [DBG] Hosting started
+2024-03-02T15:21:00.8182978-03:00 [DBG] Connection id ""0HN1QSM1O8O5E"" received FIN.
+2024-03-02T15:21:00.8182917-03:00 [DBG] Connection id ""0HN1QSM1O8O5F"" received FIN.
+2024-03-02T15:21:00.8331293-03:00 [DBG] Connection id ""0HN1QSM1O8O5E"" accepted.
+2024-03-02T15:21:00.8331293-03:00 [DBG] Connection id ""0HN1QSM1O8O5F"" accepted.
+2024-03-02T15:21:00.8373044-03:00 [DBG] Connection id ""0HN1QSM1O8O5E"" started.
+2024-03-02T15:21:00.8386330-03:00 [DBG] Connection id ""0HN1QSM1O8O5F"" started.
+2024-03-02T15:21:00.8461277-03:00 [DBG] Connection id ""0HN1QSM1O8O5F"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2024-03-02T15:21:00.8461277-03:00 [DBG] Connection id ""0HN1QSM1O8O5E"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2024-03-02T15:21:00.8531464-03:00 [DBG] Connection id ""0HN1QSM1O8O5F"" disconnecting.
+2024-03-02T15:21:00.8599504-03:00 [DBG] Connection id ""0HN1QSM1O8O5E"" disconnecting.
+2024-03-02T15:21:00.8695500-03:00 [DBG] Connection id ""0HN1QSM1O8O5F"" stopped.
+2024-03-02T15:21:00.8695500-03:00 [DBG] Connection id ""0HN1QSM1O8O5E"" stopped.
+2024-03-02T15:21:03.0227978-03:00 [DBG] Connection id ""0HN1QSM1O8O5G"" accepted.
+2024-03-02T15:21:03.0390605-03:00 [DBG] Connection id ""0HN1QSM1O8O5G"" started.
+2024-03-02T15:21:03.0920131-03:00 [DBG] Connection id ""0HN1QSM1O8O5H"" accepted.
+2024-03-02T15:21:03.1117491-03:00 [DBG] Connection id ""0HN1QSM1O8O5H"" started.
+2024-03-02T15:21:03.1826823-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/swagger/index.html - -
+2024-03-02T15:21:03.4149100-03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-03-02T15:21:03.7419233-03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-03-02T15:21:03.7759405-03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2024-03-02T15:21:03.7887241-03:00 [DBG] Connection id ""0HN1QSM1O8O5I"" accepted.
+2024-03-02T15:21:03.8096836-03:00 [DBG] Connection id ""0HN1QSM1O8O5G"" completed keep alive response.
+2024-03-02T15:21:03.8117568-03:00 [DBG] Connection id ""0HN1QSM1O8O5I"" started.
+2024-03-02T15:21:03.8099974-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/_framework/aspnetcore-browser-refresh.js - -
+2024-03-02T15:21:03.8198030-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/swagger/index.html - - - 200 - text/html;charset=utf-8 646.6486ms
+2024-03-02T15:21:03.8188940-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/_vs/browserLink - -
+2024-03-02T15:21:03.8260304-03:00 [DBG] Connection id ""0HN1QSM1O8O5H"" completed keep alive response.
+2024-03-02T15:21:03.8288430-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/_framework/aspnetcore-browser-refresh.js - - - 200 13782 application/javascript;+charset=utf-8 18.7285ms
+2024-03-02T15:21:03.9324836-03:00 [DBG] Connection id ""0HN1QSM1O8O5I"" completed keep alive response.
+2024-03-02T15:21:03.9385133-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 119.5877ms
+2024-03-02T15:21:04.0193195-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/swagger/v1/swagger.json - -
+2024-03-02T15:21:04.2654062-03:00 [DBG] Connection id ""0HN1QSM1O8O5I"" completed keep alive response.
+2024-03-02T15:21:04.2698776-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 250.5453ms
+2024-03-02T15:21:44.6170854-03:00 [INF] Request starting HTTP/1.1 POST http://localhost:3001/Usuario/Cadastro application/json-patch+json 151
+2024-03-02T15:21:44.6230898-03:00 [DBG] "POST" requests are not supported
+2024-03-02T15:21:44.6272705-03:00 [DBG] The request has an origin header: '"http://localhost:3001"'.
+2024-03-02T15:21:44.6309413-03:00 [INF] CORS policy execution successful.
+2024-03-02T15:21:44.6357858-03:00 [WRN] Failed to determine the https port for redirect.
+2024-03-02T15:21:44.6750728-03:00 [DBG] 1 candidate(s) found for the request path '"/Usuario/Cadastro"'
+2024-03-02T15:21:44.6857403-03:00 [DBG] Endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"' with route pattern '"Usuario/Cadastro"' is valid for the request path '"/Usuario/Cadastro"'
+2024-03-02T15:21:44.6904657-03:00 [DBG] Request matched endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"'
+2024-03-02T15:21:44.6968547-03:00 [INF] Executing endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"'
+2024-03-02T15:21:44.7370498-03:00 [INF] Route matched with "{action = \"CadastraUsuario\", controller = \"Usuario\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[PedagioPayPortalUsuario.Models.USUARIO]] CadastraUsuario(PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto)" on controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario").
+2024-03-02T15:21:44.7445205-03:00 [DBG] Execution plan of "authorization" filters (in the following order): ["None"]
+2024-03-02T15:21:44.7482981-03:00 [DBG] Execution plan of "resource" filters (in the following order): ["None"]
+2024-03-02T15:21:44.7520879-03:00 [DBG] Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-03-02T15:21:44.7569310-03:00 [DBG] Execution plan of "exception" filters (in the following order): ["None"]
+2024-03-02T15:21:44.7621959-03:00 [DBG] Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-03-02T15:21:44.7729817-03:00 [DBG] Executing controller factory for controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario")
+2024-03-02T15:21:45.0054061-03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-03-02T15:21:45.2700142-03:00 [DBG] Executed controller factory for controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario")
+2024-03-02T15:21:45.2806848-03:00 [DBG] Attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' ...
+2024-03-02T15:21:45.2869610-03:00 [DBG] Attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' using the name '""' in request data ...
+2024-03-02T15:21:45.2929272-03:00 [DBG] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter"' for content type '"application/json-patch+json"'.
+2024-03-02T15:21:45.2967677-03:00 [DBG] Selected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter"' for content type '"application/json-patch+json"'.
+2024-03-02T15:21:45.3120562-03:00 [DBG] Connection id ""0HN1QSM1O8O5I"", Request id ""0HN1QSM1O8O5I:00000004"": started reading request body.
+2024-03-02T15:21:45.3160439-03:00 [DBG] Connection id ""0HN1QSM1O8O5I"", Request id ""0HN1QSM1O8O5I:00000004"": done reading request body.
+2024-03-02T15:21:45.5294465-03:00 [DBG] Done attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T15:21:45.5341599-03:00 [DBG] Done attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T15:21:45.5386880-03:00 [DBG] Attempting to validate the bound parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' ...
+2024-03-02T15:21:45.5649344-03:00 [DBG] Done attempting to validate the bound parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T15:21:46.5331492-03:00 [WRN] The property '"ID_CONCESSAO"' on entity type '"CONCESSAO"' is of type 'byte', but is set up to use a SQL Server identity column; this requires that values starting at 255 and counting down will be used for temporary key values. A temporary key value is needed for every entity inserted in a single call to 'SaveChanges'. Care must be taken that these values do not collide with real key values.
+2024-03-02T15:21:46.8460391-03:00 [DBG] Entity Framework Core "7.0.0" initialized '"PEDAGIOPAYContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"7.0.0"' with options: "None"
+2024-03-02T15:21:46.9688977-03:00 [DBG] Compiling query expression: "
+"'"DbSet<USUARIO>()
+    .FirstOrDefault(x => x.EMAIL == __emailUsuario_0)"'
+2024-03-02T15:21:47.5627676-03:00 [DBG] Generated query execution expression: "
+"'"queryContext => new SingleQueryingEnumerable<USUARIO>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: USUARIO.EMAIL (string) Required PK AfterSave:Throw MaxLength(100) Ansi, 0], [Property: USUARIO.BL_VALIDADO (bool?) ValueGenerated.OnAdd, 1], [Property: USUARIO.CD_STATUS (bool?) ValueGenerated.OnAdd, 2], [Property: USUARIO.CELULAR (string) MaxLength(12) Ansi, 3], [Property: USUARIO.CODIGO_VALIDACAO (string) MaxLength(4) Ansi, 4], [Property: USUARIO.CPF_CNPJ (string) MaxLength(20) Ansi, 5], [Property: USUARIO.DH_TIMESTAMP (DateTime?) ValueGenerated.OnAdd, 6], [Property: USUARIO.ID_APPLE (string) MaxLength(50) Ansi, 7], [Property: USUARIO.ID_FACEBOOK (string) MaxLength(50) Ansi, 8], [Property: USUARIO.ID_GOOGLE (string) MaxLength(50) Ansi, 9], [Property: USUARIO.ID_USUARIO (int) Required ValueGenerated.OnAdd, 10], [Property: USUARIO.NOME (string) MaxLength(50) Ansi, 11], [Property: USUARIO.SENHA (string) MaxLength(100) Ansi, 12], [Property: USUARIO.TOKEN (string) MaxLength(500) Ansi, 13] }
+        SELECT TOP(1) u.EMAIL, u.BL_VALIDADO, u.CD_STATUS, u.CELULAR, u.CODIGO_VALIDACAO, u.CPF_CNPJ, u.DH_TIMESTAMP, u.ID_APPLE, u.ID_FACEBOOK, u.ID_GOOGLE, u.ID_USUARIO, u.NOME, u.SENHA, u.TOKEN
+        FROM USUARIO AS u
+        WHERE u.EMAIL == @__emailUsuario_0), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, USUARIO>, 
+    PedagioPayPortalUsuario.Models.PEDAGIOPAYContext, 
+    False, 
+    False, 
+    True
+)
+    .SingleOrDefault()"'
+2024-03-02T15:21:47.6353149-03:00 [DBG] Creating DbCommand for '"ExecuteReader"'.
+2024-03-02T15:21:47.6438633-03:00 [DBG] Creating DbConnection.
+2024-03-02T15:21:47.6999737-03:00 [DBG] Created DbConnection. (53ms).
+2024-03-02T15:21:47.7196230-03:00 [DBG] Created DbCommand for '"ExecuteReader"' (78ms).
+2024-03-02T15:21:47.7372247-03:00 [DBG] Initialized DbCommand for '"ExecuteReader"' (103ms).
+2024-03-02T15:21:47.7473685-03:00 [DBG] Opening connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:21:49.4588623-03:00 [DBG] Opened connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:21:49.4888434-03:00 [DBG] Executing DbCommand [Parameters=["@__emailUsuario_0='?' (Size = 100) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[EMAIL], [u].[BL_VALIDADO], [u].[CD_STATUS], [u].[CELULAR], [u].[CODIGO_VALIDACAO], [u].[CPF_CNPJ], [u].[DH_TIMESTAMP], [u].[ID_APPLE], [u].[ID_FACEBOOK], [u].[ID_GOOGLE], [u].[ID_USUARIO], [u].[NOME], [u].[SENHA], [u].[TOKEN]
+FROM [USUARIO] AS [u]
+WHERE [u].[EMAIL] = @__emailUsuario_0"
+2024-03-02T15:21:49.8700607-03:00 [INF] Executed DbCommand ("391"ms) [Parameters=["@__emailUsuario_0='?' (Size = 100) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[EMAIL], [u].[BL_VALIDADO], [u].[CD_STATUS], [u].[CELULAR], [u].[CODIGO_VALIDACAO], [u].[CPF_CNPJ], [u].[DH_TIMESTAMP], [u].[ID_APPLE], [u].[ID_FACEBOOK], [u].[ID_GOOGLE], [u].[ID_USUARIO], [u].[NOME], [u].[SENHA], [u].[TOKEN]
+FROM [USUARIO] AS [u]
+WHERE [u].[EMAIL] = @__emailUsuario_0"
+2024-03-02T15:21:49.8933075-03:00 [DBG] Closing data reader to '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:21:49.9232021-03:00 [DBG] A data reader for '"PEDAGIOPAY"' on server '"192.168.140.157"' is being disposed after spending 30ms reading results.
+2024-03-02T15:21:49.9448159-03:00 [DBG] Closing connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:21:49.9733835-03:00 [DBG] Closed connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"' (32ms).
+2024-03-02T15:21:51.2920000-03:00 [INF] Iniciar envio de email
+2024-03-02T15:21:51.2948880-03:00 [INF] Email usuario : barton.hansen@ethereal.email
+2024-03-02T15:21:51.3191604-03:00 [INF] Objeto email: {"Remetente":"barton.hansen@ethereal.email","AliasRemetente":"PedagioPay","Assunto":"Confima\u00E7\u00E3o de email | Pedagio Pay","Texto":null,"CorpoHTML":false,"Destinatarios":[],"Cc":[],"Cco":[],"Anexos":[],"Imagens":[],"SMTP":{"Servidor":"smtp.ethereal.email","Porta":587,"Login":"barton.hansen@ethereal.email","Senha":"barton.hansen@ethereal.email","RequerAutenticacao":false,"UtilizaSSL":false}}
+2024-03-02T15:21:52.9233325-03:00 [INF] Executed action "PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)" in 8143.5561ms
+2024-03-02T15:21:52.9308363-03:00 [INF] Executed endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"'
+2024-03-02T15:21:52.9357547-03:00 [ERR] An unhandled exception has occurred while executing the request.
+2024-03-02T15:21:53.0629310-03:00 [DBG] Connection id ""0HN1QSM1O8O5I"" completed keep alive response.
+2024-03-02T15:21:53.0799916-03:00 [DBG] '"PEDAGIOPAYContext"' disposed.
+2024-03-02T15:21:53.1065072-03:00 [DBG] Disposing connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:21:53.1164082-03:00 [DBG] Disposed connection to database '""' on server '""' (9ms).
+2024-03-02T15:21:53.1207839-03:00 [INF] Request finished HTTP/1.1 POST http://localhost:3001/Usuario/Cadastro application/json-patch+json 151 - 500 - text/plain;+charset=utf-8 8503.6333ms
+2024-03-02T15:24:15.4002799-03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-03-02T15:24:15.5006667-03:00 [DBG] Hosting starting
+2024-03-02T15:24:15.5591368-03:00 [INF] User profile is available. Using '"C:\Users\fadami.FDM-058\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-02T15:24:15.5670105-03:00 [DBG] Reading data from file '"C:\Users\fadami.FDM-058\AppData\Local\ASP.NET\DataProtection-Keys\key-ae5c53c0-d26a-4a4a-a697-3522b7f9cd35.xml"'.
+2024-03-02T15:24:15.5863060-03:00 [DBG] Found key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35}.
+2024-03-02T15:24:15.6173625-03:00 [DBG] Considering key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} with expiration date 2024-03-19 16:36:08Z as default key.
+2024-03-02T15:24:15.6285111-03:00 [DBG] Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+2024-03-02T15:24:15.6378042-03:00 [DBG] Decrypting secret element using Windows DPAPI.
+2024-03-02T15:24:15.6437578-03:00 [DBG] Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+2024-03-02T15:24:15.6583898-03:00 [DBG] Opening CNG algorithm '"AES"' from provider 'null' with chaining mode CBC.
+2024-03-02T15:24:15.6655207-03:00 [DBG] Opening CNG algorithm '"SHA256"' from provider 'null' with HMAC.
+2024-03-02T15:24:15.6733590-03:00 [DBG] Using key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} as the default key.
+2024-03-02T15:24:15.6774337-03:00 [DBG] Key ring with default key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} was loaded during application startup.
+2024-03-02T15:24:15.8582286-03:00 [INF] Now listening on: "http://localhost:3001"
+2024-03-02T15:24:15.8611595-03:00 [DBG] Loaded hosting startup assembly "PedagioPayPortalUsuario"
+2024-03-02T15:24:15.8637229-03:00 [DBG] Loaded hosting startup assembly "Microsoft.AspNetCore.Watch.BrowserRefresh"
+2024-03-02T15:24:15.8666388-03:00 [DBG] Loaded hosting startup assembly "Microsoft.WebTools.BrowserLink.Net"
+2024-03-02T15:24:15.8697801-03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-02T15:24:15.8720832-03:00 [INF] Hosting environment: "Development"
+2024-03-02T15:24:15.8750629-03:00 [INF] Content root path: "C:\Users\fadami.FDM-058\Desktop\PedagioPayPortalUsuarioBack\PedagioPayPortalUsuario\"
+2024-03-02T15:24:15.8780002-03:00 [DBG] Hosting started
+2024-03-02T15:24:16.0371668-03:00 [DBG] Connection id ""0HN1QSNRTUDSU"" received FIN.
+2024-03-02T15:24:16.0377800-03:00 [DBG] Connection id ""0HN1QSNRTUDSU"" accepted.
+2024-03-02T15:24:16.0456795-03:00 [DBG] Connection id ""0HN1QSNRTUDSU"" started.
+2024-03-02T15:24:16.0530694-03:00 [DBG] Connection id ""0HN1QSNRTUDSU"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2024-03-02T15:24:16.0601144-03:00 [DBG] Connection id ""0HN1QSNRTUDSU"" disconnecting.
+2024-03-02T15:24:16.0692127-03:00 [DBG] Connection id ""0HN1QSNRTUDSU"" stopped.
+2024-03-02T15:24:17.1819861-03:00 [DBG] Connection id ""0HN1QSNRTUDSV"" accepted.
+2024-03-02T15:24:17.1952897-03:00 [DBG] Connection id ""0HN1QSNRTUDSV"" started.
+2024-03-02T15:24:17.2550192-03:00 [DBG] Connection id ""0HN1QSNRTUDT0"" accepted.
+2024-03-02T15:24:17.2810789-03:00 [DBG] Connection id ""0HN1QSNRTUDT0"" started.
+2024-03-02T15:24:17.3539383-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/swagger/index.html - -
+2024-03-02T15:24:17.5871215-03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-03-02T15:24:17.8958023-03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-03-02T15:24:17.9446277-03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2024-03-02T15:24:17.9694102-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/_framework/aspnetcore-browser-refresh.js - -
+2024-03-02T15:24:17.9830309-03:00 [DBG] Connection id ""0HN1QSNRTUDSV"" completed keep alive response.
+2024-03-02T15:24:17.9667493-03:00 [DBG] Connection id ""0HN1QSNRTUDT1"" accepted.
+2024-03-02T15:24:17.9923219-03:00 [DBG] Connection id ""0HN1QSNRTUDT0"" completed keep alive response.
+2024-03-02T15:24:17.9978343-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/_framework/aspnetcore-browser-refresh.js - - - 200 13782 application/javascript;+charset=utf-8 28.3189ms
+2024-03-02T15:24:18.0014422-03:00 [DBG] Connection id ""0HN1QSNRTUDT1"" started.
+2024-03-02T15:24:17.9933717-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/swagger/index.html - - - 200 - text/html;charset=utf-8 646.2957ms
+2024-03-02T15:24:18.0060503-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/_vs/browserLink - -
+2024-03-02T15:24:18.1368597-03:00 [DBG] Connection id ""0HN1QSNRTUDT1"" completed keep alive response.
+2024-03-02T15:24:18.1796657-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 173.6048ms
+2024-03-02T15:24:18.2299542-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/swagger/v1/swagger.json - -
+2024-03-02T15:24:18.5095007-03:00 [DBG] Connection id ""0HN1QSNRTUDT1"" completed keep alive response.
+2024-03-02T15:24:18.5151594-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 285.1759ms
+2024-03-02T15:24:35.1935936-03:00 [INF] Request starting HTTP/1.1 POST http://localhost:3001/Usuario/Cadastro application/json-patch+json 151
+2024-03-02T15:24:35.2005111-03:00 [DBG] "POST" requests are not supported
+2024-03-02T15:24:35.2042330-03:00 [DBG] The request has an origin header: '"http://localhost:3001"'.
+2024-03-02T15:24:35.2087727-03:00 [INF] CORS policy execution successful.
+2024-03-02T15:24:35.2165429-03:00 [WRN] Failed to determine the https port for redirect.
+2024-03-02T15:24:35.2637757-03:00 [DBG] 1 candidate(s) found for the request path '"/Usuario/Cadastro"'
+2024-03-02T15:24:35.2758297-03:00 [DBG] Endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"' with route pattern '"Usuario/Cadastro"' is valid for the request path '"/Usuario/Cadastro"'
+2024-03-02T15:24:35.2814105-03:00 [DBG] Request matched endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"'
+2024-03-02T15:24:35.2888975-03:00 [INF] Executing endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"'
+2024-03-02T15:24:35.3652887-03:00 [INF] Route matched with "{action = \"CadastraUsuario\", controller = \"Usuario\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[PedagioPayPortalUsuario.Models.USUARIO]] CadastraUsuario(PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto)" on controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario").
+2024-03-02T15:24:35.3741084-03:00 [DBG] Execution plan of "authorization" filters (in the following order): ["None"]
+2024-03-02T15:24:35.3780448-03:00 [DBG] Execution plan of "resource" filters (in the following order): ["None"]
+2024-03-02T15:24:35.3825173-03:00 [DBG] Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-03-02T15:24:35.3947888-03:00 [DBG] Execution plan of "exception" filters (in the following order): ["None"]
+2024-03-02T15:24:35.3995066-03:00 [DBG] Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-03-02T15:24:35.4043382-03:00 [DBG] Executing controller factory for controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario")
+2024-03-02T15:24:35.6521777-03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-03-02T15:24:35.9441057-03:00 [DBG] Executed controller factory for controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario")
+2024-03-02T15:24:35.9541976-03:00 [DBG] Attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' ...
+2024-03-02T15:24:35.9640082-03:00 [DBG] Attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' using the name '""' in request data ...
+2024-03-02T15:24:35.9705500-03:00 [DBG] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter"' for content type '"application/json-patch+json"'.
+2024-03-02T15:24:35.9751126-03:00 [DBG] Selected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter"' for content type '"application/json-patch+json"'.
+2024-03-02T15:24:35.9966123-03:00 [DBG] Connection id ""0HN1QSNRTUDT1"", Request id ""0HN1QSNRTUDT1:00000004"": started reading request body.
+2024-03-02T15:24:36.0026550-03:00 [DBG] Connection id ""0HN1QSNRTUDT1"", Request id ""0HN1QSNRTUDT1:00000004"": done reading request body.
+2024-03-02T15:24:36.2495111-03:00 [DBG] Done attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T15:24:36.2533905-03:00 [DBG] Done attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T15:24:36.2579440-03:00 [DBG] Attempting to validate the bound parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' ...
+2024-03-02T15:24:36.2786845-03:00 [DBG] Done attempting to validate the bound parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T15:24:37.3984545-03:00 [WRN] The property '"ID_CONCESSAO"' on entity type '"CONCESSAO"' is of type 'byte', but is set up to use a SQL Server identity column; this requires that values starting at 255 and counting down will be used for temporary key values. A temporary key value is needed for every entity inserted in a single call to 'SaveChanges'. Care must be taken that these values do not collide with real key values.
+2024-03-02T15:24:37.7625142-03:00 [DBG] Entity Framework Core "7.0.0" initialized '"PEDAGIOPAYContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"7.0.0"' with options: "None"
+2024-03-02T15:24:37.8940168-03:00 [DBG] Compiling query expression: "
+"'"DbSet<USUARIO>()
+    .FirstOrDefault(x => x.EMAIL == __emailUsuario_0)"'
+2024-03-02T15:24:38.5077615-03:00 [DBG] Generated query execution expression: "
+"'"queryContext => new SingleQueryingEnumerable<USUARIO>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: USUARIO.EMAIL (string) Required PK AfterSave:Throw MaxLength(100) Ansi, 0], [Property: USUARIO.BL_VALIDADO (bool?) ValueGenerated.OnAdd, 1], [Property: USUARIO.CD_STATUS (bool?) ValueGenerated.OnAdd, 2], [Property: USUARIO.CELULAR (string) MaxLength(12) Ansi, 3], [Property: USUARIO.CODIGO_VALIDACAO (string) MaxLength(4) Ansi, 4], [Property: USUARIO.CPF_CNPJ (string) MaxLength(20) Ansi, 5], [Property: USUARIO.DH_TIMESTAMP (DateTime?) ValueGenerated.OnAdd, 6], [Property: USUARIO.ID_APPLE (string) MaxLength(50) Ansi, 7], [Property: USUARIO.ID_FACEBOOK (string) MaxLength(50) Ansi, 8], [Property: USUARIO.ID_GOOGLE (string) MaxLength(50) Ansi, 9], [Property: USUARIO.ID_USUARIO (int) Required ValueGenerated.OnAdd, 10], [Property: USUARIO.NOME (string) MaxLength(50) Ansi, 11], [Property: USUARIO.SENHA (string) MaxLength(100) Ansi, 12], [Property: USUARIO.TOKEN (string) MaxLength(500) Ansi, 13] }
+        SELECT TOP(1) u.EMAIL, u.BL_VALIDADO, u.CD_STATUS, u.CELULAR, u.CODIGO_VALIDACAO, u.CPF_CNPJ, u.DH_TIMESTAMP, u.ID_APPLE, u.ID_FACEBOOK, u.ID_GOOGLE, u.ID_USUARIO, u.NOME, u.SENHA, u.TOKEN
+        FROM USUARIO AS u
+        WHERE u.EMAIL == @__emailUsuario_0), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, USUARIO>, 
+    PedagioPayPortalUsuario.Models.PEDAGIOPAYContext, 
+    False, 
+    False, 
+    True
+)
+    .SingleOrDefault()"'
+2024-03-02T15:24:38.6181287-03:00 [DBG] Creating DbCommand for '"ExecuteReader"'.
+2024-03-02T15:24:38.6284880-03:00 [DBG] Creating DbConnection.
+2024-03-02T15:24:38.7101705-03:00 [DBG] Created DbConnection. (74ms).
+2024-03-02T15:24:38.7303062-03:00 [DBG] Created DbCommand for '"ExecuteReader"' (105ms).
+2024-03-02T15:24:38.7544446-03:00 [DBG] Initialized DbCommand for '"ExecuteReader"' (137ms).
+2024-03-02T15:24:38.7666060-03:00 [DBG] Opening connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:24:40.5995753-03:00 [DBG] Opened connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:24:40.6275796-03:00 [DBG] Executing DbCommand [Parameters=["@__emailUsuario_0='?' (Size = 100) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[EMAIL], [u].[BL_VALIDADO], [u].[CD_STATUS], [u].[CELULAR], [u].[CODIGO_VALIDACAO], [u].[CPF_CNPJ], [u].[DH_TIMESTAMP], [u].[ID_APPLE], [u].[ID_FACEBOOK], [u].[ID_GOOGLE], [u].[ID_USUARIO], [u].[NOME], [u].[SENHA], [u].[TOKEN]
+FROM [USUARIO] AS [u]
+WHERE [u].[EMAIL] = @__emailUsuario_0"
+2024-03-02T15:24:40.9967615-03:00 [INF] Executed DbCommand ("382"ms) [Parameters=["@__emailUsuario_0='?' (Size = 100) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[EMAIL], [u].[BL_VALIDADO], [u].[CD_STATUS], [u].[CELULAR], [u].[CODIGO_VALIDACAO], [u].[CPF_CNPJ], [u].[DH_TIMESTAMP], [u].[ID_APPLE], [u].[ID_FACEBOOK], [u].[ID_GOOGLE], [u].[ID_USUARIO], [u].[NOME], [u].[SENHA], [u].[TOKEN]
+FROM [USUARIO] AS [u]
+WHERE [u].[EMAIL] = @__emailUsuario_0"
+2024-03-02T15:24:41.0163684-03:00 [DBG] Closing data reader to '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:24:41.0411001-03:00 [DBG] A data reader for '"PEDAGIOPAY"' on server '"192.168.140.157"' is being disposed after spending 25ms reading results.
+2024-03-02T15:24:41.0507770-03:00 [DBG] Closing connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:24:41.0752953-03:00 [DBG] Closed connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"' (23ms).
+2024-03-02T15:24:42.2853318-03:00 [INF] Iniciar envio de email
+2024-03-02T15:24:42.2875913-03:00 [INF] Email usuario : barton.hansen@ethereal.email
+2024-03-02T15:24:42.3027138-03:00 [INF] Objeto email: {"Remetente":"barton.hansen@ethereal.email","AliasRemetente":"PedagioPay","Assunto":"Confima\u00E7\u00E3o de email | Pedagio Pay","Texto":null,"CorpoHTML":false,"Destinatarios":[],"Cc":[],"Cco":[],"Anexos":[],"Imagens":[],"SMTP":{"Servidor":"smtp.ethereal.email","Porta":587,"Login":"barton.hansen@ethereal.email","Senha":"barton.hansen@ethereal.email","RequerAutenticacao":false,"UtilizaSSL":false}}
+2024-03-02T15:24:44.1578223-03:00 [INF] Executed action "PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)" in 8747.4867ms
+2024-03-02T15:24:44.1627496-03:00 [INF] Executed endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"'
+2024-03-02T15:24:44.1667842-03:00 [ERR] An unhandled exception has occurred while executing the request.
+2024-03-02T15:24:44.2396334-03:00 [DBG] Connection id ""0HN1QSNRTUDT1"" completed keep alive response.
+2024-03-02T15:24:44.2493970-03:00 [DBG] '"PEDAGIOPAYContext"' disposed.
+2024-03-02T15:24:44.2696263-03:00 [DBG] Disposing connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:24:44.2786408-03:00 [DBG] Disposed connection to database '""' on server '""' (9ms).
+2024-03-02T15:24:44.2828431-03:00 [INF] Request finished HTTP/1.1 POST http://localhost:3001/Usuario/Cadastro application/json-patch+json 151 - 500 - text/plain;+charset=utf-8 9089.2601ms
+2024-03-02T15:26:04.8564242-03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-03-02T15:26:04.9564449-03:00 [DBG] Hosting starting
+2024-03-02T15:26:05.0086395-03:00 [INF] User profile is available. Using '"C:\Users\fadami.FDM-058\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-02T15:26:05.0166003-03:00 [DBG] Reading data from file '"C:\Users\fadami.FDM-058\AppData\Local\ASP.NET\DataProtection-Keys\key-ae5c53c0-d26a-4a4a-a697-3522b7f9cd35.xml"'.
+2024-03-02T15:26:05.0336223-03:00 [DBG] Found key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35}.
+2024-03-02T15:26:05.0558072-03:00 [DBG] Considering key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} with expiration date 2024-03-19 16:36:08Z as default key.
+2024-03-02T15:26:05.0620060-03:00 [DBG] Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+2024-03-02T15:26:05.0693627-03:00 [DBG] Decrypting secret element using Windows DPAPI.
+2024-03-02T15:26:05.0731695-03:00 [DBG] Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+2024-03-02T15:26:05.0822422-03:00 [DBG] Opening CNG algorithm '"AES"' from provider 'null' with chaining mode CBC.
+2024-03-02T15:26:05.0880195-03:00 [DBG] Opening CNG algorithm '"SHA256"' from provider 'null' with HMAC.
+2024-03-02T15:26:05.0939789-03:00 [DBG] Using key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} as the default key.
+2024-03-02T15:26:05.0972637-03:00 [DBG] Key ring with default key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} was loaded during application startup.
+2024-03-02T15:26:05.2524559-03:00 [INF] Now listening on: "http://localhost:3001"
+2024-03-02T15:26:05.2552111-03:00 [DBG] Loaded hosting startup assembly "PedagioPayPortalUsuario"
+2024-03-02T15:26:05.2576818-03:00 [DBG] Loaded hosting startup assembly "Microsoft.AspNetCore.Watch.BrowserRefresh"
+2024-03-02T15:26:05.2604889-03:00 [DBG] Loaded hosting startup assembly "Microsoft.WebTools.BrowserLink.Net"
+2024-03-02T15:26:05.2635526-03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-02T15:26:05.2656213-03:00 [INF] Hosting environment: "Development"
+2024-03-02T15:26:05.2680185-03:00 [INF] Content root path: "C:\Users\fadami.FDM-058\Desktop\PedagioPayPortalUsuarioBack\PedagioPayPortalUsuario\"
+2024-03-02T15:26:05.2711248-03:00 [DBG] Hosting started
+2024-03-02T15:26:05.4937687-03:00 [DBG] Connection id ""0HN1QSOSHSACL"" received FIN.
+2024-03-02T15:26:05.4937711-03:00 [DBG] Connection id ""0HN1QSOSHSACM"" received FIN.
+2024-03-02T15:26:05.5121031-03:00 [DBG] Connection id ""0HN1QSOSHSACL"" accepted.
+2024-03-02T15:26:05.5121027-03:00 [DBG] Connection id ""0HN1QSOSHSACM"" accepted.
+2024-03-02T15:26:05.5203120-03:00 [DBG] Connection id ""0HN1QSOSHSACL"" started.
+2024-03-02T15:26:05.5288883-03:00 [DBG] Connection id ""0HN1QSOSHSACM"" started.
+2024-03-02T15:26:05.5559688-03:00 [DBG] Connection id ""0HN1QSOSHSACM"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2024-03-02T15:26:05.5559686-03:00 [DBG] Connection id ""0HN1QSOSHSACL"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2024-03-02T15:26:05.5652486-03:00 [DBG] Connection id ""0HN1QSOSHSACM"" disconnecting.
+2024-03-02T15:26:05.5673007-03:00 [DBG] Connection id ""0HN1QSOSHSACL"" disconnecting.
+2024-03-02T15:26:05.5775475-03:00 [DBG] Connection id ""0HN1QSOSHSACM"" stopped.
+2024-03-02T15:26:05.5775476-03:00 [DBG] Connection id ""0HN1QSOSHSACL"" stopped.
+2024-03-02T15:26:07.8240663-03:00 [DBG] Connection id ""0HN1QSOSHSACN"" accepted.
+2024-03-02T15:26:07.8432749-03:00 [DBG] Connection id ""0HN1QSOSHSACN"" started.
+2024-03-02T15:26:07.9079005-03:00 [DBG] Connection id ""0HN1QSOSHSACO"" accepted.
+2024-03-02T15:26:07.9364421-03:00 [DBG] Connection id ""0HN1QSOSHSACO"" started.
+2024-03-02T15:26:07.9851107-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/swagger/index.html - -
+2024-03-02T15:26:08.2412302-03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-03-02T15:26:08.5808322-03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-03-02T15:26:08.6215575-03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2024-03-02T15:26:08.6498861-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/_framework/aspnetcore-browser-refresh.js - -
+2024-03-02T15:26:08.6551004-03:00 [DBG] Connection id ""0HN1QSOSHSACN"" completed keep alive response.
+2024-03-02T15:26:08.6332049-03:00 [DBG] Connection id ""0HN1QSOSHSACP"" accepted.
+2024-03-02T15:26:08.6652337-03:00 [DBG] Connection id ""0HN1QSOSHSACO"" completed keep alive response.
+2024-03-02T15:26:08.6711214-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/swagger/index.html - - - 200 - text/html;charset=utf-8 694.4385ms
+2024-03-02T15:26:08.6727075-03:00 [DBG] Connection id ""0HN1QSOSHSACP"" started.
+2024-03-02T15:26:08.6720584-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/_framework/aspnetcore-browser-refresh.js - - - 200 13782 application/javascript;+charset=utf-8 22.0298ms
+2024-03-02T15:26:08.6779650-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/_vs/browserLink - -
+2024-03-02T15:26:08.7833049-03:00 [DBG] Connection id ""0HN1QSOSHSACP"" completed keep alive response.
+2024-03-02T15:26:08.8055062-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 127.5132ms
+2024-03-02T15:26:08.9223499-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/swagger/v1/swagger.json - -
+2024-03-02T15:26:09.2444401-03:00 [DBG] Connection id ""0HN1QSOSHSACP"" completed keep alive response.
+2024-03-02T15:26:09.2545144-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 332.1369ms
+2024-03-02T15:26:25.5370906-03:00 [INF] Request starting HTTP/1.1 POST http://localhost:3001/Usuario/Cadastro application/json-patch+json 151
+2024-03-02T15:26:25.5433669-03:00 [DBG] "POST" requests are not supported
+2024-03-02T15:26:25.5476379-03:00 [DBG] The request has an origin header: '"http://localhost:3001"'.
+2024-03-02T15:26:25.5505524-03:00 [INF] CORS policy execution successful.
+2024-03-02T15:26:25.5562047-03:00 [WRN] Failed to determine the https port for redirect.
+2024-03-02T15:26:25.6010811-03:00 [DBG] 1 candidate(s) found for the request path '"/Usuario/Cadastro"'
+2024-03-02T15:26:25.6124807-03:00 [DBG] Endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"' with route pattern '"Usuario/Cadastro"' is valid for the request path '"/Usuario/Cadastro"'
+2024-03-02T15:26:25.6171344-03:00 [DBG] Request matched endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"'
+2024-03-02T15:26:25.6222868-03:00 [INF] Executing endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"'
+2024-03-02T15:26:25.6783491-03:00 [INF] Route matched with "{action = \"CadastraUsuario\", controller = \"Usuario\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[PedagioPayPortalUsuario.Models.USUARIO]] CadastraUsuario(PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto)" on controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario").
+2024-03-02T15:26:25.6845640-03:00 [DBG] Execution plan of "authorization" filters (in the following order): ["None"]
+2024-03-02T15:26:25.6882520-03:00 [DBG] Execution plan of "resource" filters (in the following order): ["None"]
+2024-03-02T15:26:25.6925853-03:00 [DBG] Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-03-02T15:26:25.6980783-03:00 [DBG] Execution plan of "exception" filters (in the following order): ["None"]
+2024-03-02T15:26:25.7017198-03:00 [DBG] Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-03-02T15:26:25.7064217-03:00 [DBG] Executing controller factory for controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario")
+2024-03-02T15:26:25.9163870-03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-03-02T15:26:26.1481961-03:00 [DBG] Executed controller factory for controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario")
+2024-03-02T15:26:26.1619841-03:00 [DBG] Attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' ...
+2024-03-02T15:26:26.1676000-03:00 [DBG] Attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' using the name '""' in request data ...
+2024-03-02T15:26:26.1725456-03:00 [DBG] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter"' for content type '"application/json-patch+json"'.
+2024-03-02T15:26:26.1777588-03:00 [DBG] Selected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter"' for content type '"application/json-patch+json"'.
+2024-03-02T15:26:26.1950089-03:00 [DBG] Connection id ""0HN1QSOSHSACP"", Request id ""0HN1QSOSHSACP:00000004"": started reading request body.
+2024-03-02T15:26:26.1995533-03:00 [DBG] Connection id ""0HN1QSOSHSACP"", Request id ""0HN1QSOSHSACP:00000004"": done reading request body.
+2024-03-02T15:26:26.3993691-03:00 [DBG] Done attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T15:26:26.4033203-03:00 [DBG] Done attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T15:26:26.4070511-03:00 [DBG] Attempting to validate the bound parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' ...
+2024-03-02T15:26:26.4270176-03:00 [DBG] Done attempting to validate the bound parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T15:26:27.4866224-03:00 [WRN] The property '"ID_CONCESSAO"' on entity type '"CONCESSAO"' is of type 'byte', but is set up to use a SQL Server identity column; this requires that values starting at 255 and counting down will be used for temporary key values. A temporary key value is needed for every entity inserted in a single call to 'SaveChanges'. Care must be taken that these values do not collide with real key values.
+2024-03-02T15:26:27.8171134-03:00 [DBG] Entity Framework Core "7.0.0" initialized '"PEDAGIOPAYContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"7.0.0"' with options: "None"
+2024-03-02T15:26:27.9348009-03:00 [DBG] Compiling query expression: "
+"'"DbSet<USUARIO>()
+    .FirstOrDefault(x => x.EMAIL == __emailUsuario_0)"'
+2024-03-02T15:26:28.5353866-03:00 [DBG] Generated query execution expression: "
+"'"queryContext => new SingleQueryingEnumerable<USUARIO>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: USUARIO.EMAIL (string) Required PK AfterSave:Throw MaxLength(100) Ansi, 0], [Property: USUARIO.BL_VALIDADO (bool?) ValueGenerated.OnAdd, 1], [Property: USUARIO.CD_STATUS (bool?) ValueGenerated.OnAdd, 2], [Property: USUARIO.CELULAR (string) MaxLength(12) Ansi, 3], [Property: USUARIO.CODIGO_VALIDACAO (string) MaxLength(4) Ansi, 4], [Property: USUARIO.CPF_CNPJ (string) MaxLength(20) Ansi, 5], [Property: USUARIO.DH_TIMESTAMP (DateTime?) ValueGenerated.OnAdd, 6], [Property: USUARIO.ID_APPLE (string) MaxLength(50) Ansi, 7], [Property: USUARIO.ID_FACEBOOK (string) MaxLength(50) Ansi, 8], [Property: USUARIO.ID_GOOGLE (string) MaxLength(50) Ansi, 9], [Property: USUARIO.ID_USUARIO (int) Required ValueGenerated.OnAdd, 10], [Property: USUARIO.NOME (string) MaxLength(50) Ansi, 11], [Property: USUARIO.SENHA (string) MaxLength(100) Ansi, 12], [Property: USUARIO.TOKEN (string) MaxLength(500) Ansi, 13] }
+        SELECT TOP(1) u.EMAIL, u.BL_VALIDADO, u.CD_STATUS, u.CELULAR, u.CODIGO_VALIDACAO, u.CPF_CNPJ, u.DH_TIMESTAMP, u.ID_APPLE, u.ID_FACEBOOK, u.ID_GOOGLE, u.ID_USUARIO, u.NOME, u.SENHA, u.TOKEN
+        FROM USUARIO AS u
+        WHERE u.EMAIL == @__emailUsuario_0), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, USUARIO>, 
+    PedagioPayPortalUsuario.Models.PEDAGIOPAYContext, 
+    False, 
+    False, 
+    True
+)
+    .SingleOrDefault()"'
+2024-03-02T15:26:28.6058411-03:00 [DBG] Creating DbCommand for '"ExecuteReader"'.
+2024-03-02T15:26:28.6147622-03:00 [DBG] Creating DbConnection.
+2024-03-02T15:26:28.6823345-03:00 [DBG] Created DbConnection. (64ms).
+2024-03-02T15:26:28.7091728-03:00 [DBG] Created DbCommand for '"ExecuteReader"' (89ms).
+2024-03-02T15:26:28.7340536-03:00 [DBG] Initialized DbCommand for '"ExecuteReader"' (128ms).
+2024-03-02T15:26:28.7459520-03:00 [DBG] Opening connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:26:30.4002196-03:00 [DBG] Opened connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:26:30.4203706-03:00 [DBG] Executing DbCommand [Parameters=["@__emailUsuario_0='?' (Size = 100) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[EMAIL], [u].[BL_VALIDADO], [u].[CD_STATUS], [u].[CELULAR], [u].[CODIGO_VALIDACAO], [u].[CPF_CNPJ], [u].[DH_TIMESTAMP], [u].[ID_APPLE], [u].[ID_FACEBOOK], [u].[ID_GOOGLE], [u].[ID_USUARIO], [u].[NOME], [u].[SENHA], [u].[TOKEN]
+FROM [USUARIO] AS [u]
+WHERE [u].[EMAIL] = @__emailUsuario_0"
+2024-03-02T15:26:30.9862270-03:00 [INF] Executed DbCommand ("574"ms) [Parameters=["@__emailUsuario_0='?' (Size = 100) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[EMAIL], [u].[BL_VALIDADO], [u].[CD_STATUS], [u].[CELULAR], [u].[CODIGO_VALIDACAO], [u].[CPF_CNPJ], [u].[DH_TIMESTAMP], [u].[ID_APPLE], [u].[ID_FACEBOOK], [u].[ID_GOOGLE], [u].[ID_USUARIO], [u].[NOME], [u].[SENHA], [u].[TOKEN]
+FROM [USUARIO] AS [u]
+WHERE [u].[EMAIL] = @__emailUsuario_0"
+2024-03-02T15:26:31.0048080-03:00 [DBG] Closing data reader to '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:26:31.0290409-03:00 [DBG] A data reader for '"PEDAGIOPAY"' on server '"192.168.140.157"' is being disposed after spending 23ms reading results.
+2024-03-02T15:26:31.0398752-03:00 [DBG] Closing connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:26:31.0633920-03:00 [DBG] Closed connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"' (24ms).
+2024-03-02T15:26:32.1857191-03:00 [INF] Envio de email realizado com sucesso
+2024-03-02T15:27:52.2702288-03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-03-02T15:27:52.3745389-03:00 [DBG] Hosting starting
+2024-03-02T15:27:52.4340418-03:00 [INF] User profile is available. Using '"C:\Users\fadami.FDM-058\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-02T15:27:52.4415297-03:00 [DBG] Reading data from file '"C:\Users\fadami.FDM-058\AppData\Local\ASP.NET\DataProtection-Keys\key-ae5c53c0-d26a-4a4a-a697-3522b7f9cd35.xml"'.
+2024-03-02T15:27:52.4621276-03:00 [DBG] Found key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35}.
+2024-03-02T15:27:52.4856413-03:00 [DBG] Considering key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} with expiration date 2024-03-19 16:36:08Z as default key.
+2024-03-02T15:27:52.4924888-03:00 [DBG] Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+2024-03-02T15:27:52.5017742-03:00 [DBG] Decrypting secret element using Windows DPAPI.
+2024-03-02T15:27:52.5058606-03:00 [DBG] Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+2024-03-02T15:27:52.5182422-03:00 [DBG] Opening CNG algorithm '"AES"' from provider 'null' with chaining mode CBC.
+2024-03-02T15:27:52.5256923-03:00 [DBG] Opening CNG algorithm '"SHA256"' from provider 'null' with HMAC.
+2024-03-02T15:27:52.5339801-03:00 [DBG] Using key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} as the default key.
+2024-03-02T15:27:52.5396358-03:00 [DBG] Key ring with default key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} was loaded during application startup.
+2024-03-02T15:27:52.6811942-03:00 [DBG] Connection id ""0HN1QSPSG3A3P"" received FIN.
+2024-03-02T15:27:52.6983710-03:00 [DBG] Connection id ""0HN1QSPSG3A3P"" accepted.
+2024-03-02T15:27:52.7022355-03:00 [DBG] Connection id ""0HN1QSPSG3A3P"" started.
+2024-03-02T15:27:52.7029187-03:00 [INF] Now listening on: "http://localhost:3001"
+2024-03-02T15:27:52.7071802-03:00 [DBG] Loaded hosting startup assembly "PedagioPayPortalUsuario"
+2024-03-02T15:27:52.7093181-03:00 [DBG] Loaded hosting startup assembly "Microsoft.AspNetCore.Watch.BrowserRefresh"
+2024-03-02T15:27:52.7119132-03:00 [DBG] Loaded hosting startup assembly "Microsoft.WebTools.BrowserLink.Net"
+2024-03-02T15:27:52.7144212-03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-02T15:27:52.7107061-03:00 [DBG] Connection id ""0HN1QSPSG3A3P"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2024-03-02T15:27:52.7161536-03:00 [INF] Hosting environment: "Development"
+2024-03-02T15:27:52.7209572-03:00 [DBG] Connection id ""0HN1QSPSG3A3P"" disconnecting.
+2024-03-02T15:27:52.7211576-03:00 [INF] Content root path: "C:\Users\fadami.FDM-058\Desktop\PedagioPayPortalUsuarioBack\PedagioPayPortalUsuario\"
+2024-03-02T15:27:52.7256001-03:00 [DBG] Hosting started
+2024-03-02T15:27:52.7313045-03:00 [DBG] Connection id ""0HN1QSPSG3A3P"" stopped.
+2024-03-02T15:27:52.8406013-03:00 [DBG] Connection id ""0HN1QSPSG3A3Q"" accepted.
+2024-03-02T15:27:52.9219501-03:00 [DBG] Connection id ""0HN1QSPSG3A3R"" accepted.
+2024-03-02T15:27:52.9214635-03:00 [DBG] Connection id ""0HN1QSPSG3A3Q"" started.
+2024-03-02T15:27:52.9265686-03:00 [DBG] Connection id ""0HN1QSPSG3A3R"" started.
+2024-03-02T15:27:53.0108850-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/swagger/index.html - -
+2024-03-02T15:27:53.2419114-03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-03-02T15:27:53.5619473-03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-03-02T15:27:53.6075667-03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2024-03-02T15:27:53.6624267-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/_framework/aspnetcore-browser-refresh.js - -
+2024-03-02T15:27:53.6555565-03:00 [DBG] Connection id ""0HN1QSPSG3A3S"" accepted.
+2024-03-02T15:27:53.6647860-03:00 [DBG] Connection id ""0HN1QSPSG3A3Q"" completed keep alive response.
+2024-03-02T15:27:53.6766726-03:00 [DBG] Connection id ""0HN1QSPSG3A3S"" started.
+2024-03-02T15:27:53.6747172-03:00 [DBG] Connection id ""0HN1QSPSG3A3R"" completed keep alive response.
+2024-03-02T15:27:53.6913777-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/_vs/browserLink - -
+2024-03-02T15:27:53.6943787-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/_framework/aspnetcore-browser-refresh.js - - - 200 13782 application/javascript;+charset=utf-8 31.8422ms
+2024-03-02T15:27:53.6929476-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/swagger/index.html - - - 200 - text/html;charset=utf-8 697.0339ms
+2024-03-02T15:27:53.7853194-03:00 [DBG] Connection id ""0HN1QSPSG3A3S"" completed keep alive response.
+2024-03-02T15:27:53.7903973-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 98.9428ms
+2024-03-02T15:27:53.8620507-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/swagger/v1/swagger.json - -
+2024-03-02T15:27:54.1040125-03:00 [DBG] Connection id ""0HN1QSPSG3A3S"" completed keep alive response.
+2024-03-02T15:27:54.1087810-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 246.7220ms
+2024-03-02T15:28:01.5526352-03:00 [INF] Request starting HTTP/1.1 POST http://localhost:3001/Usuario/Cadastro application/json-patch+json 151
+2024-03-02T15:28:01.5623758-03:00 [DBG] "POST" requests are not supported
+2024-03-02T15:28:01.5685637-03:00 [DBG] The request has an origin header: '"http://localhost:3001"'.
+2024-03-02T15:28:01.5733534-03:00 [INF] CORS policy execution successful.
+2024-03-02T15:28:01.5781737-03:00 [WRN] Failed to determine the https port for redirect.
+2024-03-02T15:28:01.6170564-03:00 [DBG] 1 candidate(s) found for the request path '"/Usuario/Cadastro"'
+2024-03-02T15:28:01.6274475-03:00 [DBG] Endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"' with route pattern '"Usuario/Cadastro"' is valid for the request path '"/Usuario/Cadastro"'
+2024-03-02T15:28:01.6326207-03:00 [DBG] Request matched endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"'
+2024-03-02T15:28:01.6383018-03:00 [INF] Executing endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"'
+2024-03-02T15:28:01.6794173-03:00 [INF] Route matched with "{action = \"CadastraUsuario\", controller = \"Usuario\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[PedagioPayPortalUsuario.Models.USUARIO]] CadastraUsuario(PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto)" on controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario").
+2024-03-02T15:28:01.6864817-03:00 [DBG] Execution plan of "authorization" filters (in the following order): ["None"]
+2024-03-02T15:28:01.6905035-03:00 [DBG] Execution plan of "resource" filters (in the following order): ["None"]
+2024-03-02T15:28:01.6944089-03:00 [DBG] Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-03-02T15:28:01.6997950-03:00 [DBG] Execution plan of "exception" filters (in the following order): ["None"]
+2024-03-02T15:28:01.7035848-03:00 [DBG] Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-03-02T15:28:01.7077649-03:00 [DBG] Executing controller factory for controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario")
+2024-03-02T15:28:01.9054424-03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-03-02T15:28:02.1462542-03:00 [DBG] Executed controller factory for controller "PedagioPayPortalUsuario.Controllers.UsuarioController" ("PedagioPayPortalUsuario")
+2024-03-02T15:28:02.1544976-03:00 [DBG] Attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' ...
+2024-03-02T15:28:02.1604279-03:00 [DBG] Attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' using the name '""' in request data ...
+2024-03-02T15:28:02.1655422-03:00 [DBG] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter"' for content type '"application/json-patch+json"'.
+2024-03-02T15:28:02.1698602-03:00 [DBG] Selected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter"' for content type '"application/json-patch+json"'.
+2024-03-02T15:28:02.1873811-03:00 [DBG] Connection id ""0HN1QSPSG3A3S"", Request id ""0HN1QSPSG3A3S:00000004"": started reading request body.
+2024-03-02T15:28:02.1917563-03:00 [DBG] Connection id ""0HN1QSPSG3A3S"", Request id ""0HN1QSPSG3A3S:00000004"": done reading request body.
+2024-03-02T15:28:02.3975152-03:00 [DBG] Done attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T15:28:02.4029137-03:00 [DBG] Done attempting to bind parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T15:28:02.4074063-03:00 [DBG] Attempting to validate the bound parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"' ...
+2024-03-02T15:28:02.4361292-03:00 [DBG] Done attempting to validate the bound parameter '"request"' of type '"PedagioPayPortalUsuario.Data.Dtos.Usuario.CreateUsuarioDto"'.
+2024-03-02T15:28:03.4399795-03:00 [WRN] The property '"ID_CONCESSAO"' on entity type '"CONCESSAO"' is of type 'byte', but is set up to use a SQL Server identity column; this requires that values starting at 255 and counting down will be used for temporary key values. A temporary key value is needed for every entity inserted in a single call to 'SaveChanges'. Care must be taken that these values do not collide with real key values.
+2024-03-02T15:28:03.7782781-03:00 [DBG] Entity Framework Core "7.0.0" initialized '"PEDAGIOPAYContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"7.0.0"' with options: "None"
+2024-03-02T15:28:03.9071411-03:00 [DBG] Compiling query expression: "
+"'"DbSet<USUARIO>()
+    .FirstOrDefault(x => x.EMAIL == __emailUsuario_0)"'
+2024-03-02T15:28:04.5364615-03:00 [DBG] Generated query execution expression: "
+"'"queryContext => new SingleQueryingEnumerable<USUARIO>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: USUARIO.EMAIL (string) Required PK AfterSave:Throw MaxLength(100) Ansi, 0], [Property: USUARIO.BL_VALIDADO (bool?) ValueGenerated.OnAdd, 1], [Property: USUARIO.CD_STATUS (bool?) ValueGenerated.OnAdd, 2], [Property: USUARIO.CELULAR (string) MaxLength(12) Ansi, 3], [Property: USUARIO.CODIGO_VALIDACAO (string) MaxLength(4) Ansi, 4], [Property: USUARIO.CPF_CNPJ (string) MaxLength(20) Ansi, 5], [Property: USUARIO.DH_TIMESTAMP (DateTime?) ValueGenerated.OnAdd, 6], [Property: USUARIO.ID_APPLE (string) MaxLength(50) Ansi, 7], [Property: USUARIO.ID_FACEBOOK (string) MaxLength(50) Ansi, 8], [Property: USUARIO.ID_GOOGLE (string) MaxLength(50) Ansi, 9], [Property: USUARIO.ID_USUARIO (int) Required ValueGenerated.OnAdd, 10], [Property: USUARIO.NOME (string) MaxLength(50) Ansi, 11], [Property: USUARIO.SENHA (string) MaxLength(100) Ansi, 12], [Property: USUARIO.TOKEN (string) MaxLength(500) Ansi, 13] }
+        SELECT TOP(1) u.EMAIL, u.BL_VALIDADO, u.CD_STATUS, u.CELULAR, u.CODIGO_VALIDACAO, u.CPF_CNPJ, u.DH_TIMESTAMP, u.ID_APPLE, u.ID_FACEBOOK, u.ID_GOOGLE, u.ID_USUARIO, u.NOME, u.SENHA, u.TOKEN
+        FROM USUARIO AS u
+        WHERE u.EMAIL == @__emailUsuario_0), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, USUARIO>, 
+    PedagioPayPortalUsuario.Models.PEDAGIOPAYContext, 
+    False, 
+    False, 
+    True
+)
+    .SingleOrDefault()"'
+2024-03-02T15:28:04.6215346-03:00 [DBG] Creating DbCommand for '"ExecuteReader"'.
+2024-03-02T15:28:04.6276327-03:00 [DBG] Creating DbConnection.
+2024-03-02T15:28:04.6840914-03:00 [DBG] Created DbConnection. (51ms).
+2024-03-02T15:28:04.7062143-03:00 [DBG] Created DbCommand for '"ExecuteReader"' (75ms).
+2024-03-02T15:28:04.7272916-03:00 [DBG] Initialized DbCommand for '"ExecuteReader"' (105ms).
+2024-03-02T15:28:04.7380032-03:00 [DBG] Opening connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:28:06.6196991-03:00 [DBG] Opened connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:28:06.6457735-03:00 [DBG] Executing DbCommand [Parameters=["@__emailUsuario_0='?' (Size = 100) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[EMAIL], [u].[BL_VALIDADO], [u].[CD_STATUS], [u].[CELULAR], [u].[CODIGO_VALIDACAO], [u].[CPF_CNPJ], [u].[DH_TIMESTAMP], [u].[ID_APPLE], [u].[ID_FACEBOOK], [u].[ID_GOOGLE], [u].[ID_USUARIO], [u].[NOME], [u].[SENHA], [u].[TOKEN]
+FROM [USUARIO] AS [u]
+WHERE [u].[EMAIL] = @__emailUsuario_0"
+2024-03-02T15:28:06.9924597-03:00 [INF] Executed DbCommand ("357"ms) [Parameters=["@__emailUsuario_0='?' (Size = 100) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[EMAIL], [u].[BL_VALIDADO], [u].[CD_STATUS], [u].[CELULAR], [u].[CODIGO_VALIDACAO], [u].[CPF_CNPJ], [u].[DH_TIMESTAMP], [u].[ID_APPLE], [u].[ID_FACEBOOK], [u].[ID_GOOGLE], [u].[ID_USUARIO], [u].[NOME], [u].[SENHA], [u].[TOKEN]
+FROM [USUARIO] AS [u]
+WHERE [u].[EMAIL] = @__emailUsuario_0"
+2024-03-02T15:28:07.0135363-03:00 [DBG] Closing data reader to '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:28:07.0364954-03:00 [DBG] A data reader for '"PEDAGIOPAY"' on server '"192.168.140.157"' is being disposed after spending 26ms reading results.
+2024-03-02T15:28:07.0444913-03:00 [DBG] Closing connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:28:07.0622626-03:00 [DBG] Closed connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"' (17ms).
+2024-03-02T15:28:08.2047992-03:00 [INF] Envio de email realizado com sucesso
+2024-03-02T15:28:25.0782581-03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter"]
+2024-03-02T15:28:25.0924909-03:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2024-03-02T15:28:25.0981126-03:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2024-03-02T15:28:25.1020851-03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-03-02T15:28:25.1049237-03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-03-02T15:28:25.1085207-03:00 [DBG] Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter"' and content type '"application/json"' to write the response.
+2024-03-02T15:28:25.1129588-03:00 [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType2`2[[Microsoft.AspNetCore.Mvc.StatusCodeResult, Microsoft.AspNetCore.Mvc.Core, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2024-03-02T15:28:25.2361467-03:00 [INF] Executed action "PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)" in 23518.0331ms
+2024-03-02T15:28:25.2413224-03:00 [INF] Executed endpoint '"PedagioPayPortalUsuario.Controllers.UsuarioController.CadastraUsuario (PedagioPayPortalUsuario)"'
+2024-03-02T15:28:25.2450871-03:00 [DBG] Connection id ""0HN1QSPSG3A3S"" completed keep alive response.
+2024-03-02T15:28:25.2554365-03:00 [DBG] '"PEDAGIOPAYContext"' disposed.
+2024-03-02T15:28:25.2750291-03:00 [DBG] Disposing connection to database '"PEDAGIOPAY"' on server '"192.168.140.157"'.
+2024-03-02T15:28:25.2834983-03:00 [DBG] Disposed connection to database '""' on server '""' (8ms).
+2024-03-02T15:28:25.2884757-03:00 [INF] Request finished HTTP/1.1 POST http://localhost:3001/Usuario/Cadastro application/json-patch+json 151 - 200 73 application/json;+charset=utf-8 23735.8616ms
+2024-03-02T15:32:30.6919174-03:00 [DBG] Connection id ""0HN1QSPSG3A3Q"" received FIN.
+2024-03-02T15:32:30.6941685-03:00 [DBG] Connection id ""0HN1QSPSG3A3S"" received FIN.
+2024-03-02T15:32:30.7099749-03:00 [DBG] Connection id ""0HN1QSPSG3A3Q"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2024-03-02T15:32:30.7121312-03:00 [DBG] Connection id ""0HN1QSPSG3A3S"" disconnecting.
+2024-03-02T15:32:30.7163980-03:00 [DBG] Connection id ""0HN1QSPSG3A3Q"" disconnecting.
+2024-03-02T15:32:30.7080933-03:00 [DBG] Connection id ""0HN1QSPSG3A3R"" received FIN.
+2024-03-02T15:32:30.7224480-03:00 [DBG] Connection id ""0HN1QSPSG3A3Q"" stopped.
+2024-03-02T15:32:30.7238167-03:00 [DBG] Connection id ""0HN1QSPSG3A3R"" disconnecting.
+2024-03-02T15:32:30.7224514-03:00 [DBG] Connection id ""0HN1QSPSG3A3S"" stopped.
+2024-03-02T15:32:30.7295993-03:00 [DBG] Connection id ""0HN1QSPSG3A3R"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2024-03-02T15:32:30.7325738-03:00 [DBG] Connection id ""0HN1QSPSG3A3S"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2024-03-02T15:32:30.7496551-03:00 [DBG] Connection id ""0HN1QSPSG3A3R"" stopped.

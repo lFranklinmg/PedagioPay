@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\L\u00E9o Monte\\source\\repos\\PedagioPay.PortalUsuario.Back\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{09C4AC79-34AF-4493-9B69-C00A5A5B5E3E}|PedagioPayPortalUsuario\\PedagioPayPortalUsuario.csproj|c:\\users\\l\u00E9o monte\\source\\repos\\pedagiopay.portalusuario.back\\pedagiopayportalusuario\\controllers\\debitoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09C4AC79-34AF-4493-9B69-C00A5A5B5E3E}|PedagioPayPortalUsuario\\PedagioPayPortalUsuario.csproj|solutionrelative:pedagiopayportalusuario\\controllers\\debitoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09C4AC79-34AF-4493-9B69-C00A5A5B5E3E}|PedagioPayPortalUsuario\\PedagioPayPortalUsuario.csproj|c:\\users\\l\u00E9o monte\\source\\repos\\pedagiopay.portalusuario.back\\pedagiopayportalusuario\\controllers\\placacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09C4AC79-34AF-4493-9B69-C00A5A5B5E3E}|PedagioPayPortalUsuario\\PedagioPayPortalUsuario.csproj|solutionrelative:pedagiopayportalusuario\\controllers\\placacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DebitosController.cs",
+              "DocumentMoniker": "C:\\Users\\L\u00E9o Monte\\source\\repos\\PedagioPay.PortalUsuario.Back\\PedagioPayPortalUsuario\\Controllers\\DebitosController.cs",
+              "RelativeDocumentMoniker": "PedagioPayPortalUsuario\\Controllers\\DebitosController.cs",
+              "ToolTip": "C:\\Users\\L\u00E9o Monte\\source\\repos\\PedagioPay.PortalUsuario.Back\\PedagioPayPortalUsuario\\Controllers\\DebitosController.cs",
+              "RelativeToolTip": "PedagioPayPortalUsuario\\Controllers\\DebitosController.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAYwBwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T22:32:43.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlacaController.cs",
+              "DocumentMoniker": "C:\\Users\\L\u00E9o Monte\\source\\repos\\PedagioPay.PortalUsuario.Back\\PedagioPayPortalUsuario\\Controllers\\PlacaController.cs",
+              "RelativeDocumentMoniker": "PedagioPayPortalUsuario\\Controllers\\PlacaController.cs",
+              "ToolTip": "C:\\Users\\L\u00E9o Monte\\source\\repos\\PedagioPay.PortalUsuario.Back\\PedagioPayPortalUsuario\\Controllers\\PlacaController.cs",
+              "RelativeToolTip": "PedagioPayPortalUsuario\\Controllers\\PlacaController.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T22:32:28.725Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

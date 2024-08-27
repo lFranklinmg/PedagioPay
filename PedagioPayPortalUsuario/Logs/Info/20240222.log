@@ -1,0 +1,64 @@
+2024-02-22T15:59:21.5278515-03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-02-22T15:59:21.5963252-03:00 [DBG] Hosting starting
+2024-02-22T15:59:21.8295297-03:00 [INF] User profile is available. Using '"C:\Users\fadami.FDM-058\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-22T15:59:21.8364076-03:00 [DBG] Reading data from file '"C:\Users\fadami.FDM-058\AppData\Local\ASP.NET\DataProtection-Keys\key-ae5c53c0-d26a-4a4a-a697-3522b7f9cd35.xml"'.
+2024-02-22T15:59:21.9077512-03:00 [DBG] Found key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35}.
+2024-02-22T15:59:21.9830093-03:00 [DBG] Considering key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} with expiration date 2024-03-19 16:36:08Z as default key.
+2024-02-22T15:59:21.9922555-03:00 [DBG] Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+2024-02-22T15:59:22.0017475-03:00 [DBG] Decrypting secret element using Windows DPAPI.
+2024-02-22T15:59:22.0082661-03:00 [DBG] Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+2024-02-22T15:59:22.0300910-03:00 [DBG] Opening CNG algorithm '"AES"' from provider 'null' with chaining mode CBC.
+2024-02-22T15:59:22.0737624-03:00 [DBG] Opening CNG algorithm '"SHA256"' from provider 'null' with HMAC.
+2024-02-22T15:59:22.1121891-03:00 [DBG] Using key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} as the default key.
+2024-02-22T15:59:22.1196748-03:00 [DBG] Key ring with default key {ae5c53c0-d26a-4a4a-a697-3522b7f9cd35} was loaded during application startup.
+2024-02-22T15:59:22.9123769-03:00 [INF] Now listening on: "http://localhost:3001"
+2024-02-22T15:59:22.9202870-03:00 [DBG] Loaded hosting startup assembly "PedagioPayPortalUsuario"
+2024-02-22T15:59:22.9242833-03:00 [DBG] Loaded hosting startup assembly "Microsoft.AspNetCore.Watch.BrowserRefresh"
+2024-02-22T15:59:22.9270588-03:00 [DBG] Loaded hosting startup assembly "Microsoft.WebTools.BrowserLink.Net"
+2024-02-22T15:59:22.9305829-03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-22T15:59:22.9332375-03:00 [INF] Hosting environment: "Development"
+2024-02-22T15:59:22.9359323-03:00 [INF] Content root path: "C:\Users\fadami.FDM-058\Desktop\PedagioPayPortalUsuarioBack\PedagioPayPortalUsuario\"
+2024-02-22T15:59:22.9415862-03:00 [DBG] Hosting started
+2024-02-22T15:59:22.9916075-03:00 [DBG] Connection id ""0HN1JR1H00O9P"" received FIN.
+2024-02-22T15:59:23.0070498-03:00 [DBG] Connection id ""0HN1JR1H00O9P"" accepted.
+2024-02-22T15:59:23.0114187-03:00 [DBG] Connection id ""0HN1JR1H00O9P"" started.
+2024-02-22T15:59:23.0238622-03:00 [DBG] Connection id ""0HN1JR1H00O9P"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2024-02-22T15:59:23.0336046-03:00 [DBG] Connection id ""0HN1JR1H00O9P"" disconnecting.
+2024-02-22T15:59:23.0530164-03:00 [DBG] Connection id ""0HN1JR1H00O9P"" stopped.
+2024-02-22T15:59:24.3511783-03:00 [DBG] Connection id ""0HN1JR1H00O9Q"" accepted.
+2024-02-22T15:59:24.3719292-03:00 [DBG] Connection id ""0HN1JR1H00O9Q"" started.
+2024-02-22T15:59:24.4527044-03:00 [DBG] Connection id ""0HN1JR1H00O9R"" accepted.
+2024-02-22T15:59:24.4737909-03:00 [DBG] Connection id ""0HN1JR1H00O9R"" started.
+2024-02-22T15:59:24.5282448-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/swagger/index.html - -
+2024-02-22T15:59:24.8222354-03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-02-22T15:59:25.1620448-03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-02-22T15:59:25.2033015-03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2024-02-22T15:59:25.2429772-03:00 [DBG] Connection id ""0HN1JR1H00O9S"" accepted.
+2024-02-22T15:59:25.2540888-03:00 [DBG] Connection id ""0HN1JR1H00O9Q"" completed keep alive response.
+2024-02-22T15:59:25.2600106-03:00 [DBG] Connection id ""0HN1JR1H00O9S"" started.
+2024-02-22T15:59:25.2702313-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/swagger/index.html - - - 200 - text/html;charset=utf-8 748.9048ms
+2024-02-22T15:59:25.2520843-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/_framework/aspnetcore-browser-refresh.js - -
+2024-02-22T15:59:25.2712866-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/_vs/browserLink - -
+2024-02-22T15:59:25.2825320-03:00 [DBG] Connection id ""0HN1JR1H00O9R"" completed keep alive response.
+2024-02-22T15:59:25.2868581-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/_framework/aspnetcore-browser-refresh.js - - - 200 13782 application/javascript;+charset=utf-8 34.5878ms
+2024-02-22T15:59:25.4162940-03:00 [DBG] Connection id ""0HN1JR1H00O9S"" completed keep alive response.
+2024-02-22T15:59:25.4231850-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 151.8133ms
+2024-02-22T15:59:25.4752938-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/swagger/v1/swagger.json - -
+2024-02-22T15:59:25.5136908-03:00 [INF] Request starting HTTP/1.1 GET http://localhost:3001/swagger/favicon-32x32.png - -
+2024-02-22T15:59:25.5407267-03:00 [INF] Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"'
+2024-02-22T15:59:25.5538627-03:00 [DBG] Connection id ""0HN1JR1H00O9R"" completed keep alive response.
+2024-02-22T15:59:25.5585269-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/swagger/favicon-32x32.png - - - 200 628 image/png 44.8785ms
+2024-02-22T15:59:25.6942880-03:00 [DBG] Connection id ""0HN1JR1H00O9S"" completed keep alive response.
+2024-02-22T15:59:25.6989362-03:00 [INF] Request finished HTTP/1.1 GET http://localhost:3001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 223.5853ms
+2024-02-22T16:00:48.7466884-03:00 [DBG] Connection id ""0HN1JR1H00O9R"" received FIN.
+2024-02-22T16:00:48.5966359-03:00 [DBG] Connection id ""0HN1JR1H00O9Q"" received FIN.
+2024-02-22T16:00:48.6078871-03:00 [DBG] Connection id ""0HN1JR1H00O9S"" received FIN.
+2024-02-22T16:00:48.8224557-03:00 [DBG] Connection id ""0HN1JR1H00O9R"" disconnecting.
+2024-02-22T16:00:48.8271187-03:00 [DBG] Connection id ""0HN1JR1H00O9Q"" disconnecting.
+2024-02-22T16:00:48.8302221-03:00 [DBG] Connection id ""0HN1JR1H00O9R"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2024-02-22T16:00:48.8330369-03:00 [DBG] Connection id ""0HN1JR1H00O9Q"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2024-02-22T16:00:48.8293233-03:00 [DBG] Connection id ""0HN1JR1H00O9S"" disconnecting.
+2024-02-22T16:00:48.8534686-03:00 [DBG] Connection id ""0HN1JR1H00O9S"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2024-02-22T16:00:48.8570290-03:00 [DBG] Connection id ""0HN1JR1H00O9Q"" stopped.
+2024-02-22T16:00:48.8570290-03:00 [DBG] Connection id ""0HN1JR1H00O9R"" stopped.
+2024-02-22T16:00:48.8760361-03:00 [DBG] Connection id ""0HN1JR1H00O9S"" stopped.
